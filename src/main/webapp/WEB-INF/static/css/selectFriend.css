@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: weui;
+    font-size: 14px;
+}
+
+#header{
+    height: 42px;
+}
+
+#header .title{
+    background-color: #F24166;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 0;
+    font-size: 18px;
+    width: 100%;
+    height: 32px;
+}
+
+#header .title span{
+    margin-left: 32px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#header .title button{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+#content p{
+    padding: 10px 15px;
+}
+
+/*�޸�Ĭ����ʽ*/
+.weui_cells_form{
+    margin: 0;
+}
+
+.weui_cells::before{
+    border-top: 0;
+}
+
+.weui_cell:first-child::before{
+    display: flex;
+}
+
+.weui_cell:last-child::after{
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar{
+    background: #f24166 none repeat scroll 0 0;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner{
+    height: 40px;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner h1{
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner a{
+    color: #FFFFFF;
+}
+
+.weui-picker-container .weui_cells_radio .weui_check:checked + .weui_icon_checked::before{
+    color: #f24166;
+}
+
+.weui-picker-container .weui_cells_checkbox .weui_check:checked + .weui_icon_checked::before{
+    color: #f24166;
+}

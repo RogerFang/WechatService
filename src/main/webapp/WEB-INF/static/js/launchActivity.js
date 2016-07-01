@@ -1,0 +1,26 @@
+/**
+ * Created by Administrator on 2016/6/6.
+ */
+$(document).ready(function(){
+    $(".radioclass").click(function(){
+        $(this).find("span").addClass("on")
+                .find("input").attr("checked","checked");
+        $(this).siblings(".radioclass").find("span").removeClass("on")
+                .find("input").removeAttr("checked");
+        $(".checkclass").find("span").removeClass("oncheck")
+                            .find("input").removeAttr("checked");
+    })
+    $(".checkclass").click(function(){
+        if($(this).find("span").hasClass("oncheck")){
+            $(this).find("span").removeClass("oncheck")
+                    .find("input").removeAttr("checked");
+        }else{
+            $(this).find("span").addClass("oncheck")
+                    .find("input").attr("checked","checked");
+            $(".radioclass").eq(1).find("span").addClass("on")
+                                .find("input").attr("checked","checked");
+            $(".radioclass").eq(0).find("span").removeClass("on")
+                                .find("input").removeAttr("checked");
+        }
+    })
+})

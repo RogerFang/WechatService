@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+#header .title button{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+#header .title span{
+    /*margin-left: 50px;*/
+    width: 100%;
+    font-size: 18px;
+}
+
+
+#clipArea {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+}
+
+#clipBtn {
+    margin: 20px;
+}
+#view {
+    margin: 50px auto 20px;
+    width: 150px;
+    height: 150px;
+}
+
+#content p{
+    margin: 10px auto 20px;
+    text-align: center;
+}
+
+#content p span{
+    color: #f24166;
+}
+
+#content #chooseBtn{
+    position: relative;
+    width: 120px;
+    overflow: hidden;
+    background: url("../img/photo.png") no-repeat 10px center;
+    background-color: #f24166;
+    /*height: 32px;*/
+    display: block;
+    text-indent:50px;
+    border-radius:5px;
+    color: #ffffff;
+    line-height: 32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    margin-left: 30px;
+}
+
+
+#content #chooseBtn input[type="file"]{
+    position: absolute;
+    opacity: 0;
+    left: 4px;
+    top: 0;
+    height: 32px;
+    width: 100%;
+    display: inline-block;
+}
+
+#content #clipBtn{
+    position: relative;
+    width: 120px;
+    overflow: hidden;
+    background: url("../img/cut.png") no-repeat 10px center;
+    background-color: #f24166;
+    /*height: 32px;*/
+    display: block;
+    text-indent:50px;
+    border-radius:5px;
+    color: #ffffff;
+    line-height: 32px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0 auto;
+    margin-right: 30px;
+
+}
+
+#content #clipBtn button{
+    position: absolute;
+    opacity: 0;
+    left: 4px;
+    top: 0;
+    height: 32px;
+    width: 100%;
+    display: inline-block;
+}

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header .title{
+    background-color: #F24166;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#content #tab{
+    border-bottom: 1px solid #9b9b9b;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#content #tab .weui-col-50{
+    box-sizing: border-box;
+}
+
+#content #tab .weui-col-50 a{
+    color: #333333;
+}
+
+#content #tab .weui-col-50:first-child{
+    border-right: 2px solid #9b9b9b;
+}
+
+#content #tab .weui-col-50 p{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#content #tab .weui-col-50 p.selected::after{
+    content: "";
+    border-bottom: 2px solid #f24166;
+    position: absolute;
+    top:24px;
+    transform-origin: 0 0 0;
+    height: 1px;
+    left: 0;
+    width: 100%;
+}
+
+#content .activityList li .activityInfo{
+    padding: 10px 10px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#content .activityList a{
+    color: #333333;
+}
+
+#content .activityList a .weui-col-25{
+    text-align: center;
+}
+
+#content .activityList a .weui-col-25 img{
+    width:70px;
+    height:54px;
+    margin:0 auto;
+}
+
+#content .activityList a .weui-col-60{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+#content .activityList a .weui-col-60 h4{
+    height: 18px;
+    line-height: 18px;
+    /*����ֻ��ʾһ�У�����������ʡ�Ժ���ʾ*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#content .activityList a .weui-col-60 p{
+    color: #606060;
+    font-size: 12px;
+    /*����ֻ��ʾһ�У�����������ʡ�Ժ���ʾ*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#content .activityList a .weui-col-15{
+    text-align: center;
+    padding-top: 33px;
+    font-size: 12px;
+    color: #606060;
+}
+
+#content .activityList a .weui-col-15.isinprocess{
+    background: url("../img/play.png") no-repeat center 12px;
+}
+
+#content .activityList a .weui-col-15.isover{
+    background: url("../img/over.png") no-repeat center 12px;
+}
+
+#content .activityList a .weui-col-15.isoncheck{
+    background: url("../img/question.png") no-repeat center 12px;
+}
+
+#content .activityList li .activityDetail{
+    text-align: center;
+    border-bottom: 1px solid #EFEFEF;
+    padding: 2px;
+}
+
+#content .activityList li .activityDetail .weui-col-50:first-child{
+    border-right: 1px solid #EFEFEF;
+}
+
+#content .activityList li .activityDetail .weui-col-50 a{
+    display: block;
+    color: #333333;
+    font-size: 12px;
+}
+
+#content .activityList li .activityDetail .weui-col-50 p{
+    color: #9b9b9b;
+    font-size: 12px;
+}

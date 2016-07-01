@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: weui;
+    font-size: 14px;
+}
+
+#header{
+    height: 42px;
+}
+
+#header .title{
+    background-color: #F24166;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 0;
+    font-size: 18px;
+    width: 100%;
+    height: 32px;
+}
+
+#header .title span{
+    margin-left: 32px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#header .title button{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+
+/*�޸�Ĭ����ʽ*/
+.weui_cells_form{
+    margin-top: 0;
+}
+
+.weui_label{
+    display: inline;
+}
+
+#textArea{
+    display: block;
+}
+
+#textArea .weui_cell_primary{
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    margin-top: 5px;
+    padding: 2px;
+    height: 80px;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar{
+    background: #f24166 none repeat scroll 0 0;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner{
+    height: 40px;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner h1{
+    font-size: 13px;
+    color: #FFFFFF;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar .toolbar-inner a{
+    color: #FFFFFF;
+}
+
+.weui-picker-container .weui_cells_radio .weui_check:checked + .weui_icon_checked::before{
+    color: #f24166;
+}
+
+.weui_dialog .weui_dialog_ft a{
+    color: #f24166;
+    font-size: 14px;
+}
+
+/*ɾ��ͼ����ʽ*/
+.weui_uploader_file{
+    position:relative;
+}
+
+.weui_uploader_file span{
+    width: 11px;
+    height: 11px;
+    background: url("../img/delete.gif") no-repeat center;
+    position: absolute;
+    right:0px;
+    top:0px;
+}

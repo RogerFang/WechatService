@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: weui;
+}
+
+#header .title{
+    background-color: #F24166;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 18px;
+    width: 100%;
+}
+
+#content ul li{
+    min-height: 50px;
+    padding: 20px;
+}
+
+#content ul li div.friendImg{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+#content ul li img{
+    width: 50px;
+    height: 50px;
+}
+
+#content ul li div.friendInfo{
+    float: left;
+    height: 50px;
+    margin-left: 15px;
+}
+
+#content ul li div p{
+    height: 25px;
+    line-height: 25px;
+}
+
+#content ul li div p span{
+    color: #f24166;
+}

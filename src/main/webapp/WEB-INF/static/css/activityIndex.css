@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:1000;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+#header .title a{
+    height:32px;
+    width: 32px;
+    float: right;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#header .title span{
+    margin-left: 32px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#header .title #post{
+    background: url("../img/write.png") no-repeat center;
+}
+
+#header .title #search{
+    background: url("../img/search.png") no-repeat center;
+    margin-right: 0px;
+}
+
+.bd{
+    position: fixed;
+    left:0;
+    top:42px;
+    width:100%;
+}
+
+#search_bar a{
+    color: #f24166;
+}
+
+[class^="weui_icon_"]::before, [class*=" weui_icon_"]::before{
+    line-height: 28px;
+    height: 28px;
+}
+
+.weui_search_inner .weui_icon_clear{
+    top: 0;
+}
+
+.weui_search_inner .weui_search_input{
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.weui_search_inner .weui_icon_search{
+    top: 0;
+}
+
+.weui_search_text span{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#category{
+    border:1px solid #E5E7E8;
+    color: #666666;
+    padding: 5px 3px;
+    position: fixed;
+    top:86px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#category div.weui-col-25{
+    border-right: 1px solid #E5E7E8;
+}
+
+#category div.weui-col-25.noborder{
+    border-right: none;
+}
+
+#category div div>span{
+    display: block;
+    /*width: 95%;*/
+    /*padding: 0 16px 0 0;*/
+    /*background: url("../img/down.png") no-repeat right center;*/
+    height: 19px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 19px;
+}
+
+#category div div span span{
+    margin-left: 10px;
+}
+
+#category div div span i{
+    background: url("../img/down.png") no-repeat center;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 2px;
+}
+
+#category div div span.selected span{
+    color: #f24166;
+}
+
+#category div div span.selected i{
+    background: url("../img/up.png") no-repeat center;
+}
+
+#activitySelect{
+    width:100%;
+}
+
+/*�޸�ѡ���Ĭ����ʽ*/
+#activitySelect .weui_cells::before{
+    border-top: none;
+}
+
+#activitySelect>div{
+    margin-top: 10px;
+}
+
+#activitySelect .weui_cell:before{
+    border-top: none;
+}
+
+#activitySelect .weui_cell .weui_icon_checked{
+    color: #f24166;
+}
+
+#activitySelect .weui_cell .weui_icon_checked::before{
+    color: #f24166;
+}
+
+#activitySelect label{
+    border-bottom:1px solid #d9d9d9;
+    padding: 5px 20px;
+}
+
+#activitySelect label:last-child{
+    border: none;
+}
+
+#activitySelect label p.selected{
+    color: #f24166;
+}
+/*�޸�ѡ���Ĭ����ʽ����*/
+#content{
+    margin-top: 124px;
+    z-index: -1;
+}
+
+#content #activityList li{
+    border-bottom:1px solid #d9d9d9;
+    box-sizing: content-box;
+    padding: 5% 2%;
+}
+
+#content #activityList li a{
+    display: flex;
+    overflow: hidden;
+    /*justify-content: center;*/
+}
+
+#content #activityList li a .activityTime{
+    width: 20%;
+    float: left;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#content #activityList li a .activityTime p{
+    font-size: 4vw;
+    color: #333333;
+
+}
+
+#content #activityList li a .activityTime p:first-child{
+     color: #f24166;
+     font-size: 3vw;
+}
+
+#content #activityList li a .activityTime p:last-child{
+    font-size: 4vw;
+}
+
+#content #activityList li a .activityImage{
+    width: 30%;
+    float: left;
+    text-align: center;
+    display: -webkit-flex; /*webkit*/
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    -webkit-box-pack: justify;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+#content #activityList li a .activityImage img{
+    width: 100%;
+    /*max-height: 70px;*/
+    max-height: 70px;
+    /*max-width: 100%;*/
+    /*margin-top: 6px;*/
+}
+
+#content #activityList li a .activityInfo{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+#content #activityList li a .activityInfo p{
+    margin-left: 5%;
+    color: #333333;
+    font-size: 3.5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*height: 20px;*/
+}
+
+#content #activityList li a .activityInfo span{
+    font-size: 3.5vw;
+}
+
+#content #activityList li a .activityInfo p:first-child{
+    font-size: 4vw;
+}
+
+#content #activityList li a .activityInfo p:last-child{
+    padding-left: 20px;
+    background: url(../img/heart.png) no-repeat 0 center;
+    /*height: 3vw;*/
+    /*line-height: 3vw;*/
+    justify-content: space-between;
+    font-size: 4vm;
+}
+
+#content #activityList li a .activityInfo p:last-child span{
+    font-size: 3vm;
+}
+
+#content #activityList li a .activityInfo p:last-child span:first-child{
+    float: left;
+}
+
+#content #activityList li a .activityInfo p:last-child span:last-child{
+    color: #f24166;
+    padding: 2px 8px;
+    float: right;
+    border: 1px solid #f24166;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 3vm;
+}

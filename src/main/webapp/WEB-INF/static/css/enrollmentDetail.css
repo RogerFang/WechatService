@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: weui;
+}
+
+body{
+    background-color: #EFEFEF;
+}
+
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-size: 18px;
+    background-color: #f24166;
+    padding: 5px 0;
+}
+
+#header .enrollmentCount{
+    background-color: #EFEFEF;
+    padding: 5px 20px;
+    color: #333333;
+}
+
+#header .enrollmentCount span{
+    color: #007aff;
+    font-size: 14px;
+}
+
+#content{
+    margin-top: 71px;
+}
+
+#content #enrollmentList{
+    background-color: #FFFFFF!important;
+    z-index: 1;
+}
+
+#enrollmentList li{
+    padding: 10px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #D9D9DB;
+}
+
+#enrollmentList li .userInfo{
+    border-bottom: 1px solid #EFEFEF;
+    padding: 10px;
+    overflow: hidden;
+}
+
+#enrollmentList li .userInfo .userHeader{
+    float: left;
+}
+
+#enrollmentList li .userInfo .userHeader img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#enrollmentList li .userInfo .userInfoDetail{
+    float: left;
+    padding-left: 10px;
+}
+
+#enrollmentList li .userInfo .userInfoDetail h4{
+    font-weight: normal;
+    line-height: 16px;
+    height: 16px;
+}
+
+#enrollmentList li .userInfo .userInfoDetail p{
+    color: #979797;
+    line-height: 16px;
+}
+
+
+#enrollmentList li .userPhone{
+    color: #979797;
+    padding-left: 10px;
+}
+
+#enrollmentList li .userCondition{
+    float: right;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 14px;
+    padding: 2px 8px;
+    border-radius: 5px;
+    /*height: 54px;*/
+    /*line-height: 54px;*/
+}
+
+#enrollmentList li .userCondition.pass{
+    color: #09BB07;
+    border: 1px solid #09bb07;
+}
+
+#enrollmentList li .userCondition.check{
+    color: #10AEFF;
+    border: 1px solid #10AEFF;
+}
+
+
+#enrollmentList li .userCondition.refuse{
+    color: #FFBE00;
+    border: 1px solid #FFBE00;
+}
+
+
+#enrollmentList li .userCondition.quit{
+    color: #979797;
+    border: 1px solid #979797;
+}
+
+
+#enrollmentList li .userCondition.delete{
+    color: #F76260;
+    border: 1px solid #F76260;
+}

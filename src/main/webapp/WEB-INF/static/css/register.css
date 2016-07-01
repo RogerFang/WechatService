@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: weui;*/
+    color: #333333;
+    font-size: 14px;
+}
+
+body{
+    background-color: #FFEBEB;
+}
+
+#ageSelect{
+    width: 90%;
+    margin: 0 auto;
+}
+
+#ageSelect p{
+    text-align: center;
+    font-size: 20px;
+    color: #F24166;
+}
+
+#ageSelect p:first-child{
+    padding-top: 70px;
+    background: url("../img/logo-small.png") no-repeat center 0;
+}
+
+#ageSelectItem>label{
+    text-align: left;
+    padding: 10px 15px;
+}
+
+#ageSelect .radioclass:first-child{
+    margin-top: 20px;
+}
+
+#ageSelect .radioclass{
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    /*border-top: 1px solid #EFEFEF;*/
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#ageSelect .radioclass span{
+    height: 22px;
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-image: url(../img/inputradio.gif);
+    background-repeat: no-repeat;
+    background-position: -24px center;
+    display: inline-block;
+}
+
+#ageSelect label{
+    line-height: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+#ageSelect input[type=radio]{
+    opacity: 0;
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#ageSelect .radioclass span.on{
+    background-position: 0 0;
+}
+
+#ageSelect a{
+    color: #F24166;
+    padding: 3px 10px;
+    border: 1px solid #F24166;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    width: 20%;
+    text-align: center;
+}
+
+#registerHeader img{
+    max-width: 100%;
+}
+
+#registerContent div.msg input{
+    width: 95%;
+    margin: 0px auto;
+    display: inline-block;
+    padding: 5px 0;
+    /*text-align: center;*/
+    border-radius: 5px;
+    font-family: weui;
+    border: none;
+}
+
+#registerContent button{
+    width: 95%;
+    background-color: #F24166;
+    line-height: 2;
+    cursor: pointer;
+}
+
+#registerContent label{
+    width: 95%;
+    font-family: weui;
+    font-size: 13px;
+    margin: 0 auto;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+#registerContent label a{
+    color: #F24166;
+    cursor: pointer;
+}
+
+#msgValidation a{
+    border: 1px solid rgba(242,65,102, 1);
+    color: #F24166;
+}
+
+#registerContent div.msg{
+    border: 1px solid #d1d1d5;
+    width: 95%;
+    margin: 20px auto;
+    font-size:14px;
+}
+
+#registerContent div span{
+    background: url("../img/delete.gif") no-repeat center;
+    height: 11px;
+    width: 11px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#registerContent #msgValidation{
+    width: 95%;
+    margin: 20px auto;
+    font-family: weui;
+}
+
+#registerContent #msgValidation div{
+    border: 1px solid #d1d1d5;
+    width: 58%;
+    margin-right: 2%;
+}
+
+#registerContent #msgValidation input{
+    width:100%;
+    padding: 5px 0;
+    border: none;
+    font-size:14px;
+    /*text-align: center;*/
+}
+
+#registerContent #msgValidation a{
+    display: inline-block;
+    width: 40%;
+    font-size: 12px;
+    border-radius:0;
+    font-family: weui;
+}
+
+#registerContent #msgValidation a.inMsg{
+    border: 1px solid rgba(223,223,223, 1);
+    color: #DFDFDF;
+    border-radius:0;
+}
+
+#registerContent #msgValidation a::after{
+    border: 1px solid rgba(0, 0, 0, 0)
+}
+
+#registerContent .info{
+    color: #F76260;
+    font-size: 12px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin: 10px;
+}
+
+#userAgreement h3{
+    background-color: #F25376;
+    text-align: center;
+    color: #fff;
+    font-family: weui;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#userAgreement p{
+    width: 90%;
+    margin: 10px auto;
+    font-family: weui;
+    font-size: 13px;
+    line-height: 150%;
+}
+
+#userAgreement a{
+    border: 1px solid rgba(242, 65, 102, 1);
+    color: #f24166;
+    font-family: weui;
+    font-size: 14px;
+    border-radius:0;
+    width: 90%;
+    margin: 20px auto;
+    display: block;
+}
+
+.weui_btn_dialog.primary{
+    color:#f24166;
+    font-family:weui;
+}

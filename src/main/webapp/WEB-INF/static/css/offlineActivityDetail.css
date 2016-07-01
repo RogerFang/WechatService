@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-size: 18px;
+}
+
+#content{
+    margin-top: 39px;
+    margin-bottom: 55px;
+}
+
+#content #activityImage{
+    padding: 10px 30px;
+    background-color: #EFEFEF;
+    text-align: center;
+}
+
+#content #activityImage img{
+    max-width: 100%;
+    max-height: 180px;
+}
+
+#content #activityMain{
+    border-bottom: 5px solid #EFEFEF;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+#content #activityMain #activityInfo{
+    width: 80%;
+    float: left;
+    font-size: 14px;
+}
+
+#content #activityMain #activityInfo p{
+    font-size: 14px;
+}
+
+#content #activityMain #activityInfo p span{
+    font-size: 14px;
+}
+
+#content #activityMain #activityJoin{
+    width: 20%;
+    float: left;
+}
+
+#content #activityMain #activityJoin p{
+    padding-top: 18px;
+    background: url("../img/heart.png") no-repeat center 0;
+    font-size: 10px;
+    text-align: center;
+}
+
+#content #activityDetail{
+    padding: 5px 10px;
+    margin-bottom: 30px;
+}
+
+#content #activityDetail h4{
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#content #activityDetail p{
+    color: #333333;
+    text-indent: 24px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+#content #commentArea{
+    background-color: #F4F5F5;
+    padding: 5px 10px 10px 10px;
+    margin-bottom: 30px;
+}
+
+#content #commentArea ul{
+    list-style: none;
+}
+
+#content #commentArea ul li{
+    overflow: hidden;
+    padding: 5px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+#content #commentArea ul li img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    float: left;
+    margin-right: 5%;
+}
+
+#content #commentArea ul li div:first-child{
+    overflow: hidden;
+}
+
+#content #commentArea ul li div div{
+    float: left;
+    width: 80%;
+}
+
+#content #commentArea ul li div p:first-child{
+    overflow: hidden;
+}
+
+#content #commentArea ul li div p span:first-child{
+    float: left;
+}
+
+#content #commentArea ul li div p span:last-child{
+    float: right;
+}
+
+#content #commentArea>p{
+    color:#333333;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+#content #commentArea ul li .reply{
+    overflow: hidden;
+}
+
+#content #commentArea #inputArea{
+    overflow: hidden;
+    margin-top:10px;
+}
+
+#content #commentArea input{
+    font-size: 12px;
+    line-height: 12px;
+    height: 20px;
+    width: 70%;
+    float: left;
+    border: 0;
+}
+
+#content #commentArea button{
+    margin-left: 5%;
+    padding-left: 10%;
+    width: 25%;
+    text-align: left;
+    float: right;
+    display: block;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    color: #494949;
+    cursor: pointer;
+}
+
+#content #commentArea #inputArea button{
+    background: url("../img/edit.png") no-repeat 0 center;
+}
+
+#content #commentArea .reply button{
+    background: url("../img/reply.png") no-repeat 0 center;
+}
+
+#content #activitySelected #activitySelectedHeader{
+    padding: 5px;
+    border-left: 5px solid #f24166;
+}
+
+#content #activitySelected #activitySelectedHeader span{
+    padding-left: 5px;
+    padding-right: 23px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    background: url("../img/hot.gif") no-repeat right center;
+}
+
+#content #activitySelected #activitySelectedHeader a{
+    float: right;
+    color: #333333;
+}
+
+#content #activityList li{
+    padding: 0 2% 2%;
+    border-bottom:1px solid #d9d9d9;
+    box-sizing: border-box;
+}
+
+#content #activityList li a{
+    display: block;
+    overflow: hidden;
+}
+
+#content #activityList li a .activityTime{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+#content #activityList li a .activityTime p{
+    font-size: 9px;
+    color: #333333;
+}
+
+#content #activityList li a .activityTime p:first-child{
+    color: #f24166;
+}
+
+#content #activityList li a .activityTime p:last-child{
+    font-size: 14px;
+}
+
+#content #activityList li a .activityImage{
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+#content #activityList li a .activityImage img{
+    max-width: 100%;
+}
+
+#content #activityList li a .activityInfo{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+#content #activityList li a .activityInfo p{
+    margin-left: 10%;
+    color: #333333;
+    font-size: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#content #activityList li a .activityInfo span{
+    font-size: 10px;
+}
+
+#content #activityList li a .activityInfo p:first-child{
+    font-size: 12px;
+}
+
+#content #activityList li a .activityInfo p:last-child{
+    padding-left: 20px;
+    background: url(../img/heart.png) no-repeat 0 center;
+    /*height: 22px;*/
+    /*line-height: 22px;*/
+}
+
+#content #activityList li a .activityInfo p:last-child span:last-child {
+    color: #f24166;
+    padding: 0px 8px;
+    float: right;
+    border: 1px solid #f24166;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#footer{
+    background-color: #f24166;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0;
+}
+
+#footer div{
+    text-align: center;
+}
+
+#footer a{
+    color: #ffffff;
+    display:block;
+    padding-top: 24px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#footer div:not(:last-child) div{
+    border-right: 1px solid #FFFFFF;
+    text-align: center;
+}
+
+#footer div .open a{
+    background: url("../img/phone.png") no-repeat center 0;
+}
+
+#footer div .post a{
+    background: url("../img/add.png") no-repeat center 3px;
+}
+
+#footer div .join a{
+    background: url("../img/person.png") no-repeat center 0;
+}
+
+.weui_dialog .weui_dialog_ft a{
+    color: #f24166;
+    font-size: 14px;
+}

@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-size: 18px;
+}
+
+#content a{
+    text-align: center;
+}
+
+#content a div{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 45px;
+}
+
+#content>div:first-child{
+    border-bottom: 1px solid #d9d9d9;
+}
+
+#content>div:first-child a:first-child div{
+    background: url(../img/home.png) no-repeat #f24166 center;
+}
+
+#content>div:first-child a:last-child div{
+    background: url(../img/dress.png) no-repeat #f24166 center;
+}
+
+#content>div:last-child a:first-child div{
+    background: url(../img/mother.png) no-repeat #f24166 center;
+}
+
+#content>div:last-child a:last-child div{
+    background: url(../img/rose.png) no-repeat #f24166 center;
+}
+
+#content a p{
+    color: #333333;
+    font-size: 18px;
+}
+
+#content>div a:first-child{
+    border-right: 1px solid #d9d9d9;
+}
+
+#content a:hover{
+    background-color: #f69;
+}
+
+#content a:hover p{
+    color: #FFFFFF;
+}

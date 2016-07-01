@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+#header .title button{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+#header .title span{
+    margin-left: 50px;
+    width: 100%;
+    font-size: 18px;
+}
+
+/*�޸�ѡ���Ĭ����ʽ*/
+.weui-picker-container .weui_cells_radio .weui_check:checked + .weui_icon_checked::before{
+    color: #f24166;
+}
+
+.weui_cells .weui_cell input{
+    color: #333333;
+}
+
+.weui-picker-container .weui-picker-modal .picker-button{
+    color:#ffffff;
+}
+
+.weui-picker-container .weui-picker-modal .toolbar{
+    background: #f24166 none repeat scroll 0 0;
+}
+
+.weui-picker-container .weui-picker-modal .title{
+    color: #ffffff;
+}
+
+.weui-picker-container .weui_cells_checkbox .weui_check:checked + .weui_icon_checked::before{
+    color: #f24166;
+}
+
+#wrapper .weui_cells{
+    margin-top: 0;
+}
+
+.weui-picker-container .weui-picker-modal .title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*��ʾ����ʽ*/
+.info{
+    left: 50%;
+    margin-left: -3.8em;
+    top: 35%;
+    border-radius: 5px;
+    color: #fff;
+    min-height: 7.6em;
+    position: fixed;
+    text-align: center;
+    width: 7.6em;
+
+}
+
+.info.success{
+    background: url("../img/right.png") no-repeat center 40%;
+    background-color: rgba(40, 40, 40, 0.75);
+}
+
+.info.error{
+    background: url("../img/error.png") no-repeat center 40%;
+    background-color: rgba(40, 40, 40, 0.75);
+}
+
+
+.info p{
+    position: absolute;
+    bottom: 0;
+    left:10%;
+    width: 80%;
+    margin-bottom: 10px;
+}

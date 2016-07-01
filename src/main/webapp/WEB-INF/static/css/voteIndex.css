@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-size: 18px;
+}
+
+#content{
+    margin-top: 40px;
+}
+
+#content #tab{
+    border: 1px solid #C0C1C1;
+    border-top: none;
+}
+
+#content #tab .weui-col-33{
+    padding: 5px 0;
+}
+
+#content #tab .weui-col-33 div{
+    color: #333333;
+    border-right: 2px solid #C0C1C1;
+    text-align: center;
+}
+
+#content #tab .weui-col-33:last-child div{
+    border-right: none;
+}
+/*tab��ѡ�е���ʽ*/
+#content #tab .weui-col-33.selected{
+    border-bottom: 3px solid #f24166;
+}
+
+#content #tab .weui-col-33.selected div{
+    color:#f24166;
+}
+
+#contentMain #all ul li{
+    border-bottom: 1px solid #C0C1C1;
+}
+
+#contentMain #all ul li .photo{
+    background-color: #EEEEEE;
+    text-align: center;
+    position: relative;
+}
+
+#contentMain #all ul li .photo img{
+    max-width: 90%;
+    max-height: 200px;
+}
+
+#contentMain #all ul li .photo .user{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    height: 40px;
+    text-align: left;
+    padding: 2px 0;
+}
+
+#contentMain #all ul li .photo .user img{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    float: left;
+    margin-left: 5%;
+}
+
+#contentMain #all ul li .photo .user span{
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+#contentMain #all ul li .photo .user span:last-child{
+    color: #f24166;
+    border: 1px solid #f24166;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-left: 2%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#contentMain #all ul li .vote{
+    background-color: #EEEEEE;
+    padding: 5px 5%;
+    text-align: center;
+}
+
+#contentMain #all ul li .vote button{
+    padding: 2px 10px;
+    color: #FFFFFF;
+    border:0;
+    border-radius: 5px;
+    background-color: #f24166;
+}
+
+#contentMain #rank ul li{
+    padding: 5px 5%;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#contentMain #rank ul li .weui-col-33:not(:first-child){
+    text-align: center;
+    line-height: 50px;
+}
+
+#contentMain #rank ul li .weui-col-33:first-child{
+    padding: 5px 0;
+}
+
+#contentMain #rank ul li .weui-col-33:first-child img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    float: left;
+}
+
+#contentMain #rank ul li .weui-col-33:first-child div{
+    float: left;
+    max-width: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-left: 10%;
+}
+
+#contentMain #rank ul li .weui-col-33:first-child div p{
+    border: 1px solid #f24166;
+    color: #f24166;
+    padding: 0 5px;
+    border-radius: 10px;
+    font-size: 10px;
+}
+
+#contentMain #rank ul li .weui-col-33:last-child{
+    color: #f24166;
+}
+
+#contentMain #record ul li{
+    border-bottom: 1px solid #C0C1C1;
+}
+
+#contentMain #record ul li .photo{
+    background-color: #EEEEEE;
+    text-align: center;
+    position: relative;
+}
+
+#contentMain #record ul li .photo img{
+    max-width: 90%;
+    max-height: 200px;
+}
+
+#contentMain #record ul li .photo .user{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+    height: 40px;
+    text-align: left;
+    padding: 2px 0;
+}
+
+#contentMain #record ul li .photo .user img{
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    float: left;
+    margin-left: 5%;
+}
+
+#contentMain #record ul li .photo .user span{
+    line-height: 40px;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-left: 5%;
+}
+
+#contentMain #record ul li .photo .user span:last-child{
+    color: #f24166;
+    border: 1px solid #f24166;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin-left: 2%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#contentMain #record ul li .vote{
+    background-color: #EEEEEE;
+    padding: 5px 5%;
+    text-align: center;
+}
+
+#contentMain #record ul li .vote button{
+    padding: 2px 10px;
+    color: #FFFFFF;
+    border:0;
+    border-radius: 5px;
+    background-color: #f24166;
+}
+
+.weui_dialog .weui_dialog_ft a{
+    color: #f24166;
+    font-size: 14px;
+}

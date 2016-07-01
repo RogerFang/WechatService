@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+#header .title a{
+    height:32px;
+    width: 32px;
+    float: right;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background: url("../img/search.png") no-repeat center;
+}
+
+#header .title span{
+    margin-left: 32px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#content{
+    padding: 0 10px 10px;
+}
+
+#content>p{
+    margin: 10px 0;
+}
+
+#content li{
+    height: 40px;
+    padding: 5px;
+    border-bottom: 1px solid #EFEFEF;
+    margin-bottom: 5px;
+}
+
+#content li a{
+    display: block;
+    height: 40px;
+}
+
+#content li a img{
+    max-width: 40px;
+    border-radius: 20px;
+    float: left;
+}
+
+#content li a div{
+    float: left;
+    color: #333333;
+    padding-left: 5%;
+}
+
+#content li a div p{
+    font-size: 10px;
+    line-height: 13px;
+}
+
+#content li .weui-col-15{
+    padding-top: 20px;
+    background: url("../img/heartblack2.png") no-repeat center 0;
+    text-align: center;
+    color: #333333;
+}
+
+#content li .weui-col-15.clicked{
+    background: url("../img/heartfill.png") no-repeat center 0;
+}

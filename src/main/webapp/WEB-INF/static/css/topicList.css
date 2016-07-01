@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    height: 42px;
+}
+
+#header .title{
+    background-color: #F24166;
+    text-align: center;
+    color: #fff;
+    font-family: weui;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#header span{
+    margin-left: 32px;
+}
+
+#header a{
+    /*background: url("/img/write.png") no-repeat center;*/
+    height:32px;
+    width: 32px;
+    float: right;
+    margin-right: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+#content{
+    width: 100%;
+    /*padding:5px 10px;*/
+}
+
+#content .topic{
+    width: 100%;
+    border-bottom: 3px solid #D2D2D2;
+}
+
+#content .topic a{
+    color: #333333;
+}
+
+#content .topic .topicHeader{
+    width: 100%;
+    height: 60px;
+    padding:5px 10px 0 10px;
+    box-sizing: border-box;
+}
+
+#content .topic .topicHeader .topicUserHead{
+    border-radius: 25px;
+    height: 50px;
+    margin-left: 0;
+    width: 50px;
+    float: left;
+}
+
+#content .topic .topicHeader .topicUserInfo{
+    float: left;
+    margin-left: 15px;
+    color: #333333;
+    font-family: weui;
+    font-size: 14px;
+    height: 50px;
+    /*width: 150px;*/
+}
+
+#content .topic .topicHeader .topicUserInfo span{
+    color: #F34266;
+    font-size: 12px;
+    margin-left: 3px;
+    border: 1px solid #f34266;
+    border-radius: 10px;
+    width: 40px;
+    height: 17px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 17px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#content .topic .topicContent{
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+#content .topic .topicContent p{
+    font-family: weui;
+    font-size: 14px;
+    max-height:100px;
+    overflow: hidden;
+}
+
+#content .topic .topicContent img{
+    max-width: 100%;
+    max-height: 200px;
+    margin: 5px auto;
+    display: block;
+}
+
+#content .topic .topicFooter{
+    width: 100%;
+    padding: 5px 0;
+}
+
+#content .topic .topicFooter>span{
+    height: 16px;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    border-right: 1px solid #D2D2D2;
+}
+
+#content .topic .topicFooter span a{
+    /*height: 16px;*/
+    /*width: 40px;*/
+    text-align: right;
+    display: inline-block;
+    color:#333333;
+    text-underline: none;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#content .topic .topicFooter span:first-child a{
+    background: url("../img/eye.png") no-repeat 0px center;
+}
+
+#content .topic .topicFooter span:last-child a{
+    background: url("../img/kiss.png") no-repeat 0px center;
+}

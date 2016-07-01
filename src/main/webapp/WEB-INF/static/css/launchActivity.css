@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#content #header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    padding: 0;
+}
+
+#header .title button{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+#header .title span{
+    margin-left: 43px;
+    width: 100%;
+    font-size: 18px;
+}
+
+#content h4{
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#content form .radioclass{
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-top: 1px solid #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#content .radioclass span{
+    height: 18px;
+    width: 24px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-image: url(../img/inputradio.gif);
+    background-repeat: no-repeat;
+    background-position: -24px 0;
+    display: inline-block;
+}
+
+#content label{
+    line-height: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+#content input[type=radio]{
+    opacity: 0;
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#content .radioclass span.on{
+    background-position: 0 0;
+}
+
+#content form .checkclass{
+    padding: 5px 35px;
+    margin-bottom: 5px;
+}
+
+#content form .checkclass span{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-image: url(../img/checkbox.gif);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: inline-block;
+}
+
+#content input[type=checkbox]{
+    opacity: 0;
+    cursor: pointer;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#content form .checkclass span.oncheck{
+    background-position: 0 -21px;
+}
+
+#content p{
+    padding: 5px 10px;
+    font-size: 12px;
+}
