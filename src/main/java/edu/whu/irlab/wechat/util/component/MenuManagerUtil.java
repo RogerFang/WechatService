@@ -53,11 +53,11 @@ public class MenuManagerUtil {
         ViewButton btn15 = new ViewButton();
         btn15.setType("view");
         btn15.setName("wcpay");
-        btn15.setUrl("http://roger.com/WechatService/testpay");
+        btn15.setUrl("http://http://roger.tunnel.qydev.com/WechatService/WechatService/testpay");
 
         ComplexButton mainBtn1 = new ComplexButton();
         mainBtn1.setName("Herpink");
-        mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14});
+        mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14, btn15});
 
 
         ViewButton mainBtn2 = new ViewButton();

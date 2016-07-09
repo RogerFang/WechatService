@@ -13,7 +13,7 @@ public class Configure {
     private static String appSecret = "fe1b97dd7e20110a7070e055fb8a3f8e";
 
     //微信支付分配的商户号ID（开通公众号的微信支付功能之后可以获取到）
-    private static String mchID = "123456";
+    private static String mchID = "1355364302";
 
     //受理模式下给子商户分配的子商户号
     private static String subMchID = "";

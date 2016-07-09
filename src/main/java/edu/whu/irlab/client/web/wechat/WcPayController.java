@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -23,8 +24,6 @@ import java.util.TreeMap;
 @Controller
 @RequestMapping("/testpay")
 public class WcPayController {
-    @Autowired
-    private Parameter config;
 
     @RequestMapping(method = RequestMethod.GET)
     public String testpay(){
@@ -32,12 +31,14 @@ public class WcPayController {
     }
 
     @RequestMapping(value = "/unifiedorder", method = RequestMethod.GET)
-    public void unifiedorder(HttpServletRequest request) throws IllegalAccessException {
+    @ResponseBody
+    public JSONObject unifiedorder() throws IllegalAccessException {
+        System.out.println("Unified order!" + Configure.getMchid());
         SortedMap<Object, Object> parameters = new TreeMap();
-        parameters.put("appid", config.getAppId());
+        parameters.put("appid", "wx61afb7c6dddd0806");
 
-        parameters.put("mch_id", config.getMchId());
-        parameters.put("nonce_str", SignUtil.create_nonce_str());
+        parameters.put("mch_id", Configure.getMchid());
+        parameters.put("nonce_str", PayCommonUtil.CreateNoncestr());
         parameters.put("body", "LEO测试");
         parameters.put("out_trade_no", "201412051510");
         parameters.put("total_fee", "1");
@@ -57,6 +58,7 @@ public class WcPayController {
         System.out.println("requestXML: " + requestXML);
         JSONObject jsonObject = CommonUtil.httpsRequest(Configure.UNIFIED_ORDER_URL, "POST", requestXML);
         System.out.println("jsonObject: " + jsonObject);
+        return jsonObject;
     }
 
     @RequestMapping(value = "/notify", method = RequestMethod.GET)
