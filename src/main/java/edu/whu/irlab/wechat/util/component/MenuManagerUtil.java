@@ -50,6 +50,11 @@ public class MenuManagerUtil {
         btn14.setName("app下载");
         btn14.setUrl("http://a.app.qq.com/o/simple.jsp?pkgname=com.kaiyitech.ipink");
 
+        ViewButton btn15 = new ViewButton();
+        btn15.setType("view");
+        btn15.setName("wcpay");
+        btn15.setUrl("http://roger.com/WechatService/testpay");
+
         ComplexButton mainBtn1 = new ComplexButton();
         mainBtn1.setName("Herpink");
         mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14});
