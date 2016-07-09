@@ -7,9 +7,9 @@ public class MD5 {
             "8", "9", "a", "b", "c", "d", "e", "f"};
 
     /**
-     * ×ª»»×Ö½ÚÊı×éÎª16½øÖÆ×Ö´®
-     * @param b ×Ö½ÚÊı×é
-     * @return 16½øÖÆ×Ö´®
+     * è½¬æ¢å­—èŠ‚æ•°ç»„ä¸º16è¿›åˆ¶å­—ä¸²
+     * @param b å­—èŠ‚æ•°ç»„
+     * @return 16è¿›åˆ¶å­—ä¸²
      */
     public static String byteArrayToHexString(byte[] b) {
         StringBuilder resultSb = new StringBuilder();
@@ -20,9 +20,9 @@ public class MD5 {
     }
 
     /**
-     * ×ª»»byteµ½16½øÖÆ
-     * @param b Òª×ª»»µÄbyte
-     * @return 16½øÖÆ¸ñÊ½
+     * è½¬æ¢byteåˆ°16è¿›åˆ¶
+     * @param b è¦è½¬æ¢çš„byte
+     * @return 16è¿›åˆ¶æ ¼å¼
      */
     private static String byteToHexString(byte b) {
         int n = b;
@@ -35,9 +35,9 @@ public class MD5 {
     }
 
     /**
-     * MD5±àÂë
-     * @param origin Ô­Ê¼×Ö·û´®
-     * @return ¾­¹ıMD5¼ÓÃÜÖ®ºóµÄ½á¹û
+     * MD5ç¼–ç 
+     * @param origin åŸå§‹å­—ç¬¦ä¸²
+     * @return ç»è¿‡MD5åŠ å¯†ä¹‹åçš„ç»“æœ
      */
     public static String MD5Encode(String origin) {
         String resultString = null;

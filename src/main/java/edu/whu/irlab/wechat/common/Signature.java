@@ -11,9 +11,9 @@ import java.util.Map;
 
 public class Signature {
     /**
-     * Ç©ÃûËã·¨
-     * @param o Òª²ÎÓëÇ©ÃûµÄÊı¾İ¶ÔÏó
-     * @return Ç©Ãû
+     * ç­¾åç®—æ³•
+     * @param o è¦å‚ä¸ç­¾åçš„æ•°æ®å¯¹è±¡
+     * @return ç­¾å
      * @throws IllegalAccessException
      */
     public static String getSign(Object o) throws IllegalAccessException {
@@ -62,25 +62,25 @@ public class Signature {
     }
 
     /**
-     * ´ÓAPI·µ»ØµÄXMLÊı¾İÀïÃæÖØĞÂ¼ÆËãÒ»´ÎÇ©Ãû
-     * @param responseString API·µ»ØµÄXMLÊı¾İ
-     * @return ĞÂÏÊ³öÂ¯µÄÇ©Ãû
+     * ä»APIè¿”å›çš„XMLæ•°æ®é‡Œé¢é‡æ–°è®¡ç®—ä¸€æ¬¡ç­¾å
+     * @param responseString APIè¿”å›çš„XMLæ•°æ®
+     * @return æ–°é²œå‡ºç‚‰çš„ç­¾å
      * @throws ParserConfigurationException
      * @throws IOException
      * @throws SAXException
      */
     public static String getSignFromResponseString(String responseString) throws IOException, SAXException, ParserConfigurationException {
         Map<String,Object> map = XMLParser.getMapFromXML(responseString);
-        //Çåµô·µ»ØÊı¾İ¶ÔÏóÀïÃæµÄSignÊı¾İ£¨²»ÄÜ°ÑÕâ¸öÊı¾İÒ²¼Ó½øÈ¥½øĞĞÇ©Ãû£©£¬È»ºóÓÃÇ©ÃûËã·¨½øĞĞÇ©Ãû
+        //æ¸…æ‰è¿”å›æ•°æ®å¯¹è±¡é‡Œé¢çš„Signæ•°æ®ï¼ˆä¸èƒ½æŠŠè¿™ä¸ªæ•°æ®ä¹ŸåŠ è¿›å»è¿›è¡Œç­¾åï¼‰ï¼Œç„¶åç”¨ç­¾åç®—æ³•è¿›è¡Œç­¾å
         map.put("sign","");
-        //½«API·µ»ØµÄÊı¾İ¸ù¾İÓÃÇ©ÃûËã·¨½øĞĞ¼ÆËãĞÂµÄÇ©Ãû£¬ÓÃÀ´¸úAPI·µ»ØµÄÇ©Ãû½øĞĞ±È½Ï
+        //å°†APIè¿”å›çš„æ•°æ®æ ¹æ®ç”¨ç­¾åç®—æ³•è¿›è¡Œè®¡ç®—æ–°çš„ç­¾åï¼Œç”¨æ¥è·ŸAPIè¿”å›çš„ç­¾åè¿›è¡Œæ¯”è¾ƒ
         return Signature.getSign(map);
     }
 
     /**
-     * ¼ìÑéAPI·µ»ØµÄÊı¾İÀïÃæµÄÇ©ÃûÊÇ·ñºÏ·¨£¬±ÜÃâÊı¾İÔÚ´«ÊäµÄ¹ı³ÌÖĞ±»µÚÈı·½´Û¸Ä
-     * @param responseString API·µ»ØµÄXMLÊı¾İ×Ö·û´®
-     * @return APIÇ©ÃûÊÇ·ñºÏ·¨
+     * æ£€éªŒAPIè¿”å›çš„æ•°æ®é‡Œé¢çš„ç­¾åæ˜¯å¦åˆæ³•ï¼Œé¿å…æ•°æ®åœ¨ä¼ è¾“çš„è¿‡ç¨‹ä¸­è¢«ç¬¬ä¸‰æ–¹ç¯¡æ”¹
+     * @param responseString APIè¿”å›çš„XMLæ•°æ®å­—ç¬¦ä¸²
+     * @return APIç­¾åæ˜¯å¦åˆæ³•
      * @throws ParserConfigurationException
      * @throws IOException
      * @throws SAXException
@@ -91,21 +91,21 @@ public class Signature {
 
         String signFromAPIResponse = map.get("sign").toString();
         if(signFromAPIResponse=="" || signFromAPIResponse == null){
-//            Util.log("API·µ»ØµÄÊı¾İÇ©ÃûÊı¾İ²»´æÔÚ£¬ÓĞ¿ÉÄÜ±»µÚÈı·½´Û¸Ä!!!");
+//            Util.log("APIè¿”å›çš„æ•°æ®ç­¾åæ•°æ®ä¸å­˜åœ¨ï¼Œæœ‰å¯èƒ½è¢«ç¬¬ä¸‰æ–¹ç¯¡æ”¹!!!");
             return false;
         }
-//        Util.log("·şÎñÆ÷»Ø°üÀïÃæµÄÇ©ÃûÊÇ:" + signFromAPIResponse);
-        //Çåµô·µ»ØÊı¾İ¶ÔÏóÀïÃæµÄSignÊı¾İ£¨²»ÄÜ°ÑÕâ¸öÊı¾İÒ²¼Ó½øÈ¥½øĞĞÇ©Ãû£©£¬È»ºóÓÃÇ©ÃûËã·¨½øĞĞÇ©Ãû
+//        Util.log("æœåŠ¡å™¨å›åŒ…é‡Œé¢çš„ç­¾åæ˜¯:" + signFromAPIResponse);
+        //æ¸…æ‰è¿”å›æ•°æ®å¯¹è±¡é‡Œé¢çš„Signæ•°æ®ï¼ˆä¸èƒ½æŠŠè¿™ä¸ªæ•°æ®ä¹ŸåŠ è¿›å»è¿›è¡Œç­¾åï¼‰ï¼Œç„¶åç”¨ç­¾åç®—æ³•è¿›è¡Œç­¾å
         map.put("sign","");
-        //½«API·µ»ØµÄÊı¾İ¸ù¾İÓÃÇ©ÃûËã·¨½øĞĞ¼ÆËãĞÂµÄÇ©Ãû£¬ÓÃÀ´¸úAPI·µ»ØµÄÇ©Ãû½øĞĞ±È½Ï
+        //å°†APIè¿”å›çš„æ•°æ®æ ¹æ®ç”¨ç­¾åç®—æ³•è¿›è¡Œè®¡ç®—æ–°çš„ç­¾åï¼Œç”¨æ¥è·ŸAPIè¿”å›çš„ç­¾åè¿›è¡Œæ¯”è¾ƒ
         String signForAPIResponse = Signature.getSign(map);
 
         if(!signForAPIResponse.equals(signFromAPIResponse)){
-            //Ç©ÃûÑé²»¹ı£¬±íÊ¾Õâ¸öAPI·µ»ØµÄÊı¾İÓĞ¿ÉÄÜÒÑ¾­±»´Û¸ÄÁË
-//            Util.log("API·µ»ØµÄÊı¾İÇ©ÃûÑéÖ¤²»Í¨¹ı£¬ÓĞ¿ÉÄÜ±»µÚÈı·½´Û¸Ä!!!");
+            //ç­¾åéªŒä¸è¿‡ï¼Œè¡¨ç¤ºè¿™ä¸ªAPIè¿”å›çš„æ•°æ®æœ‰å¯èƒ½å·²ç»è¢«ç¯¡æ”¹äº†
+//            Util.log("APIè¿”å›çš„æ•°æ®ç­¾åéªŒè¯ä¸é€šè¿‡ï¼Œæœ‰å¯èƒ½è¢«ç¬¬ä¸‰æ–¹ç¯¡æ”¹!!!");
             return false;
         }
-//        Util.log("¹§Ï²£¬API·µ»ØµÄÊı¾İÇ©ÃûÑéÖ¤Í¨¹ı!!!");
+//        Util.log("æ­å–œï¼ŒAPIè¿”å›çš„æ•°æ®ç­¾åéªŒè¯é€šè¿‡!!!");
         return true;
     }
 

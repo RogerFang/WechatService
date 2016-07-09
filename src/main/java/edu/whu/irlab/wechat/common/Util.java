@@ -18,9 +18,9 @@ import java.util.Map;
 public class Util {
 
     /**
-     * Í¨¹ı·´ÉäµÄ·½Ê½±éÀú¶ÔÏóµÄÊôĞÔºÍÊôĞÔÖµ£¬·½±ãµ÷ÊÔ
+     * é€šè¿‡åå°„çš„æ–¹å¼éå†å¯¹è±¡çš„å±æ€§å’Œå±æ€§å€¼ï¼Œæ–¹ä¾¿è°ƒè¯•
      *
-     * @param o Òª±éÀúµÄ¶ÔÏó
+     * @param o è¦éå†çš„å¯¹è±¡
      * @throws Exception
      */
     public static void reflect(Object o) throws Exception {
@@ -63,10 +63,10 @@ public class Util {
     }
 
     public static Object getObjectFromXML(String xml, Class tClass) {
-        //½«´ÓAPI·µ»ØµÄXMLÊı¾İÓ³Éäµ½Java¶ÔÏó
+        //å°†ä»APIè¿”å›çš„XMLæ•°æ®æ˜ å°„åˆ°Javaå¯¹è±¡
         XStream xStreamForResponseData = new XStream();
         xStreamForResponseData.alias("xml", tClass);
-//        xStreamForResponseData.ignoreUnknownElements();//ÔİÊ±ºöÂÔµôÒ»Ğ©ĞÂÔöµÄ×Ö¶Î
+//        xStreamForResponseData.ignoreUnknownElements();//æš‚æ—¶å¿½ç•¥æ‰ä¸€äº›æ–°å¢çš„å­—æ®µ
         return xStreamForResponseData.fromXML(xml);
     }
 
@@ -93,9 +93,9 @@ public class Util {
     }
 
     /**
-     * ¶ÁÈ¡±¾µØµÄxmlÊı¾İ£¬Ò»°ãÓÃÀ´×Ô²âÓÃ
-     * @param localPath ±¾µØxmlÎÄ¼şÂ·¾¶
-     * @return ¶Áµ½µÄxml×Ö·û´®
+     * è¯»å–æœ¬åœ°çš„xmlæ•°æ®ï¼Œä¸€èˆ¬ç”¨æ¥è‡ªæµ‹ç”¨
+     * @param localPath æœ¬åœ°xmlæ–‡ä»¶è·¯å¾„
+     * @return è¯»åˆ°çš„xmlå­—ç¬¦ä¸²
      */
     public static String getLocalXMLString(String localPath) throws IOException {
         return Util.inputStreamToString(Util.class.getResourceAsStream(localPath));

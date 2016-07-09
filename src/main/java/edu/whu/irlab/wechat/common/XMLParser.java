@@ -17,13 +17,13 @@ import java.util.Map;
 public class XMLParser {
     public static Map<String,Object> getMapFromXML(String xmlString) throws ParserConfigurationException, IOException, SAXException {
 
-        //ÕâÀïÓÃDomµÄ·½Ê½½âÎö»Ø°üµÄ×îÖ÷ÒªÄ¿µÄÊÇ·ÀÖ¹APIĞÂÔö»Ø°ü×Ö¶Î
+        //è¿™é‡Œç”¨Domçš„æ–¹å¼è§£æå›åŒ…çš„æœ€ä¸»è¦ç›®çš„æ˜¯é˜²æ­¢APIæ–°å¢å›åŒ…å­—æ®µ
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
         InputStream is =  Util.getStringStream(xmlString);
         Document document = builder.parse(is);
 
-        //»ñÈ¡µ½documentÀïÃæµÄÈ«²¿½áµã
+        //è·å–åˆ°documenté‡Œé¢çš„å…¨éƒ¨ç»“ç‚¹
         NodeList allNodes = document.getFirstChild().getChildNodes();
         Node node;
         Map<String, Object> map = new HashMap<String, Object>();
