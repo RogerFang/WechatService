@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.SortedMap;
 
 import edu.whu.irlab.wechat.common.Configure;
+import edu.whu.irlab.wechat.common.MD5Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +42,6 @@ public class PayCommonUtil {
 	 * @param parameters 请求参数
 	 * @return
 	 */
-    /*
 	public static String createSign(String characterEncoding,SortedMap<Object,Object> parameters){
 		StringBuffer sb = new StringBuffer();
 		Set es = parameters.entrySet();
@@ -58,7 +58,8 @@ public class PayCommonUtil {
 		sb.append("key=" + Configure.getKey());
 		String sign = MD5Util.MD5Encode(sb.toString(), characterEncoding).toUpperCase();
 		return sign;
-	}*/
+	}
+
 	/**
 	 * @author 李欣桦
 	 * @date 2014-12-5下午2:32:05
