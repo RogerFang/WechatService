@@ -1,114 +1,114 @@
 package edu.whu.irlab.wechat.common;
 
 public class Configure {
-    //Õâ¸ö¾ÍÊÇ×Ô¼ºÒª±£¹ÜºÃµÄË½ÓĞKeyÁË£¨ÇĞ¼ÇÖ»ÄÜ·ÅÔÚ×Ô¼ºµÄºóÌ¨´úÂëÀï£¬²»ÄÜ·ÅÔÚÈÎºÎ¿ÉÄÜ±»¿´µ½Ô´´úÂëµÄ¿Í»§¶Ë³ÌĞòÖĞ£©
-	// Ã¿´Î×Ô¼ºPostÊı¾İ¸øAPIµÄÊ±ºò¶¼ÒªÓÃÕâ¸ökeyÀ´¶ÔËùÓĞ×Ö¶Î½øĞĞÇ©Ãû£¬Éú³ÉµÄÇ©Ãû»á·ÅÔÚSignÕâ¸ö×Ö¶Î£¬APIÊÕµ½PostÊı¾İµÄÊ±ºòÒ²»áÓÃÍ¬ÑùµÄÇ©ÃûËã·¨¶ÔPost¹ıÀ´µÄÊı¾İ½øĞĞÇ©ÃûºÍÑéÖ¤
-	// ÊÕµ½APIµÄ·µ»ØµÄÊ±ºòÒ²ÒªÓÃÕâ¸ökeyÀ´¶Ô·µ»ØµÄÊı¾İËãÏÂÇ©Ãû£¬¸úAPIµÄSignÊı¾İ½øĞĞ±È½Ï£¬Èç¹ûÖµ²»Ò»ÖÂ£¬ÓĞ¿ÉÄÜÊı¾İ±»µÚÈı·½¸ø´Û¸Ä
+    //è¿™ä¸ªå°±æ˜¯è‡ªå·±è¦ä¿ç®¡å¥½çš„ç§æœ‰Keyäº†ï¼ˆåˆ‡è®°åªèƒ½æ”¾åœ¨è‡ªå·±çš„åå°ä»£ç é‡Œï¼Œä¸èƒ½æ”¾åœ¨ä»»ä½•å¯èƒ½è¢«çœ‹åˆ°æºä»£ç çš„å®¢æˆ·ç«¯ç¨‹åºä¸­ï¼‰
+    // æ¯æ¬¡è‡ªå·±Postæ•°æ®ç»™APIçš„æ—¶å€™éƒ½è¦ç”¨è¿™ä¸ªkeyæ¥å¯¹æ‰€æœ‰å­—æ®µè¿›è¡Œç­¾åï¼Œç”Ÿæˆçš„ç­¾åä¼šæ”¾åœ¨Signè¿™ä¸ªå­—æ®µï¼ŒAPIæ”¶åˆ°Postæ•°æ®çš„æ—¶å€™ä¹Ÿä¼šç”¨åŒæ ·çš„ç­¾åç®—æ³•å¯¹Postè¿‡æ¥çš„æ•°æ®è¿›è¡Œç­¾åå’ŒéªŒè¯
+    // æ”¶åˆ°APIçš„è¿”å›çš„æ—¶å€™ä¹Ÿè¦ç”¨è¿™ä¸ªkeyæ¥å¯¹è¿”å›çš„æ•°æ®ç®—ä¸‹ç­¾åï¼Œè·ŸAPIçš„Signæ•°æ®è¿›è¡Œæ¯”è¾ƒï¼Œå¦‚æœå€¼ä¸ä¸€è‡´ï¼Œæœ‰å¯èƒ½æ•°æ®è¢«ç¬¬ä¸‰æ–¹ç»™ç¯¡æ”¹
 
-	private static String key = "123456";
+    private static String key = "123456";
 
-	//Î¢ĞÅ·ÖÅäµÄ¹«ÖÚºÅID£¨¿ªÍ¨¹«ÖÚºÅÖ®ºó¿ÉÒÔ»ñÈ¡µ½£©
-	private static String appID = "wxe77e6cada6b7344f";
+    //å¾®ä¿¡åˆ†é…çš„å…¬ä¼—å·IDï¼ˆå¼€é€šå…¬ä¼—å·ä¹‹åå¯ä»¥è·å–åˆ°ï¼‰
+    private static String appID = "wxe77e6cada6b7344f";
 
     private static String appSecret = "fe1b97dd7e20110a7070e055fb8a3f8e";
 
-	//Î¢ĞÅÖ§¸¶·ÖÅäµÄÉÌ»§ºÅID£¨¿ªÍ¨¹«ÖÚºÅµÄÎ¢ĞÅÖ§¸¶¹¦ÄÜÖ®ºó¿ÉÒÔ»ñÈ¡µ½£©
-	private static String mchID = "123456";
+    //å¾®ä¿¡æ”¯ä»˜åˆ†é…çš„å•†æˆ·å·IDï¼ˆå¼€é€šå…¬ä¼—å·çš„å¾®ä¿¡æ”¯ä»˜åŠŸèƒ½ä¹‹åå¯ä»¥è·å–åˆ°ï¼‰
+    private static String mchID = "123456";
 
-	//ÊÜÀíÄ£Ê½ÏÂ¸ø×ÓÉÌ»§·ÖÅäµÄ×ÓÉÌ»§ºÅ
-	private static String subMchID = "";
+    //å—ç†æ¨¡å¼ä¸‹ç»™å­å•†æˆ·åˆ†é…çš„å­å•†æˆ·å·
+    private static String subMchID = "";
 
-	//HTTPSÖ¤ÊéµÄ±¾µØÂ·¾¶
-	private static String certLocalPath = "";
+    //HTTPSè¯ä¹¦çš„æœ¬åœ°è·¯å¾„
+    private static String certLocalPath = "";
 
-	//HTTPSÖ¤ÊéÃÜÂë£¬Ä¬ÈÏÃÜÂëµÈÓÚÉÌ»§ºÅMCHID
-	private static String certPassword = "";
+    //HTTPSè¯ä¹¦å¯†ç ï¼Œé»˜è®¤å¯†ç ç­‰äºå•†æˆ·å·MCHID
+    private static String certPassword = "";
 
-	//ÊÇ·ñÊ¹ÓÃÒì²½Ïß³ÌµÄ·½Ê½À´ÉÏ±¨API²âËÙ£¬Ä¬ÈÏÎªÒì²½Ä£Ê½
-	private static boolean useThreadToDoReport = true;
+    //æ˜¯å¦ä½¿ç”¨å¼‚æ­¥çº¿ç¨‹çš„æ–¹å¼æ¥ä¸ŠæŠ¥APIæµ‹é€Ÿï¼Œé»˜è®¤ä¸ºå¼‚æ­¥æ¨¡å¼
+    private static boolean useThreadToDoReport = true;
 
-	//»úÆ÷IP
-	private static String ip = "127.0.0.1";
+    //æœºå™¨IP
+    private static String ip = "127.0.0.1";
 
-	//ÒÔÏÂÊÇ¼¸¸öAPIµÄÂ·¾¶£º
+    //ä»¥ä¸‹æ˜¯å‡ ä¸ªAPIçš„è·¯å¾„ï¼š
     public static String UNIFIED_ORDER_URL = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 
-	public static boolean isUseThreadToDoReport() {
-		return useThreadToDoReport;
-	}
+    public static boolean isUseThreadToDoReport() {
+        return useThreadToDoReport;
+    }
 
-	public static void setUseThreadToDoReport(boolean useThreadToDoReport) {
-		Configure.useThreadToDoReport = useThreadToDoReport;
-	}
+    public static void setUseThreadToDoReport(boolean useThreadToDoReport) {
+        Configure.useThreadToDoReport = useThreadToDoReport;
+    }
 
-	public static String HttpsRequestClassName = "com.tencent.common.HttpsRequest";
+    public static String HttpsRequestClassName = "com.tencent.common.HttpsRequest";
 
-	public static void setKey(String key) {
-		Configure.key = key;
-	}
+    public static void setKey(String key) {
+        Configure.key = key;
+    }
 
-	public static void setAppID(String appID) {
-		Configure.appID = appID;
-	}
+    public static void setAppID(String appID) {
+        Configure.appID = appID;
+    }
 
     public static void setAppSecret(String appSecret) {
         Configure.appSecret = appSecret;
     }
 
     public static void setMchID(String mchID) {
-		Configure.mchID = mchID;
-	}
+        Configure.mchID = mchID;
+    }
 
-	public static void setSubMchID(String subMchID) {
-		Configure.subMchID = subMchID;
-	}
+    public static void setSubMchID(String subMchID) {
+        Configure.subMchID = subMchID;
+    }
 
-	public static void setCertLocalPath(String certLocalPath) {
-		Configure.certLocalPath = certLocalPath;
-	}
+    public static void setCertLocalPath(String certLocalPath) {
+        Configure.certLocalPath = certLocalPath;
+    }
 
-	public static void setCertPassword(String certPassword) {
-		Configure.certPassword = certPassword;
-	}
+    public static void setCertPassword(String certPassword) {
+        Configure.certPassword = certPassword;
+    }
 
-	public static void setIp(String ip) {
-		Configure.ip = ip;
-	}
+    public static void setIp(String ip) {
+        Configure.ip = ip;
+    }
 
-	public static String getKey(){
-		return key;
-	}
-	
-	public static String getAppid(){
-		return appID;
-	}
+    public static String getKey(){
+        return key;
+    }
+
+    public static String getAppid(){
+        return appID;
+    }
 
     public static String getAppSecret() {
         return appSecret;
     }
 
     public static String getMchid(){
-		return mchID;
-	}
+        return mchID;
+    }
 
-	public static String getSubMchid(){
-		return subMchID;
-	}
-	
-	public static String getCertLocalPath(){
-		return certLocalPath;
-	}
-	
-	public static String getCertPassword(){
-		return certPassword;
-	}
+    public static String getSubMchid(){
+        return subMchID;
+    }
 
-	public static String getIP(){
-		return ip;
-	}
+    public static String getCertLocalPath(){
+        return certLocalPath;
+    }
 
-	public static void setHttpsRequestClassName(String name){
-		HttpsRequestClassName = name;
-	}
+    public static String getCertPassword(){
+        return certPassword;
+    }
+
+    public static String getIP(){
+        return ip;
+    }
+
+    public static void setHttpsRequestClassName(String name){
+        HttpsRequestClassName = name;
+    }
 
 }
