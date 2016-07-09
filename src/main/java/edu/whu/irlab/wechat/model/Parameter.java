@@ -12,6 +12,8 @@ public class Parameter {
     private String appSecret;
     private String domain;
     private String servicePath;
+    private String mchId;
+    private String key;
 
     public String getToken() {
         return token;
@@ -51,5 +53,21 @@ public class Parameter {
 
     public void setServicePath(String servicePath) {
         this.servicePath = servicePath;
+    }
+
+    public String getMchId() {
+        return mchId;
+    }
+
+    public void setMchId(String mchId) {
+        this.mchId = mchId;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }
