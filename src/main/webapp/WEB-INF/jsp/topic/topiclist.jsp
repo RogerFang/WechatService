@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	<div id="wrapper">
+<div id="wrapper">
 		<div id="header">
 			<p class="title"><span>粉蜜话题</span><a href="${ctx}/topic/release" style="background: url('${ctx}/img/write.png') no-repeat center;"></a></p>
 		</div>
