@@ -37,18 +37,26 @@ public class MenuManagerUtil {
         ViewButton btn11 = new ViewButton();
         btn11.setType("view");
         btn11.setName("会员");
-        // btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=register#wechat_redirect");
-        btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
+        // roger 测试号
+        // btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
+        // herpink 服务号
+        btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
 
         ViewButton btn12 = new ViewButton();
         btn12.setType("view");
         btn12.setName("蜜语");
-        btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
+        // roger 测试号
+        // btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
+        // herpink 服务号
+        btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
 
         ViewButton btn13 = new ViewButton();
         btn13.setType("view");
         btn13.setName("搜蜜");
-        btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
+        // roger 测试号
+        // btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
+        // herpink 服务号
+        btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
 
         ViewButton btn14 = new ViewButton();
         btn14.setType("view");
@@ -63,7 +71,7 @@ public class MenuManagerUtil {
 
         ComplexButton mainBtn1 = new ComplexButton();
         mainBtn1.setName("姐妹会员");
-        mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14, btn15});
+        mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14});
 
 
         ViewButton mainBtn2 = new ViewButton();

@@ -32,7 +32,7 @@ public class OAuthUtil {
 
         // 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值 （非必填）
         // String state = "testpay:1";
-        String state = "eventinfo";
+        String state = "findFriend";
 
         // 无论直接打开还是做页面302重定向时候，必须带此参数 （必填）
         String wechat_redirect = "wechat_redirect";

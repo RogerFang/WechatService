@@ -25,7 +25,7 @@
         <mvc:interceptor>
             <mvc:mapping path="/member/**"/>
             <mvc:mapping path="/topic/**"/>
-            <!--<mvc:mapping path="/eventinfo/**"/>-->
+            <mvc:mapping path="/eventinfo/**"/>
             <!--<mvc:mapping path="/topic/comment"/>-->
 
             <mvc:exclude-mapping path="/member/login" />
