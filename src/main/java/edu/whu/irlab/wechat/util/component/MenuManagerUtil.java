@@ -11,12 +11,17 @@ import edu.whu.irlab.wechat.util.CommonUtil;
  */
 public class MenuManagerUtil {
     public static final String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
-   public static final String appId = "wxe77e6cada6b7344f";
-   public static final String appSecret = "fe1b97dd7e20110a7070e055fb8a3f8e";
+    // roger 测试号
+    // public static final String appId = "wxe77e6cada6b7344f";
+    // public static final String appSecret = "fe1b97dd7e20110a7070e055fb8a3f8e";
 
-    // Herpink
+    // Herpink 订阅号
     // public static final String appId = "wx1142ce0bdd3e8671";
     // public static final String appSecret = "5bc20582735ea46b3e2d2368928d07eb";
+
+    // Herpink 服务号
+    public static final String appId = "wx61afb7c6dddd0806";
+    public static final String appSecret = "b1def0804063b267dc2650806d6409af";
 
 
     public static void main(String[] args) {
@@ -52,23 +57,26 @@ public class MenuManagerUtil {
 
         ViewButton btn15 = new ViewButton();
         btn15.setType("view");
-        btn15.setName("wcpay");
-        btn15.setUrl("http://http://roger.tunnel.qydev.com/WechatService/WechatService/testpay");
+        btn15.setName("testpay");
+        // btn15.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=testpay:1#wechat_redirect");
+        btn15.setUrl("http://roger.tunnel.qydev.com/WechatService/testpay/payindex");
 
         ComplexButton mainBtn1 = new ComplexButton();
-        mainBtn1.setName("Herpink");
+        mainBtn1.setName("姐妹会员");
         mainBtn1.setSub_button(new Button[]{btn11, btn12, btn13, btn14, btn15});
 
 
         ViewButton mainBtn2 = new ViewButton();
         mainBtn2.setType("view");
-        mainBtn2.setName("粉蜜活动");
-        mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
+        mainBtn2.setName("粉蜜社交");
+        // mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
+        mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
 
         ViewButton mainBtn3 = new ViewButton();
         mainBtn3.setType("view");
         mainBtn3.setName("粉蜜商城");
-        mainBtn3.setUrl("http://m.weigouyi.com/160623095250911019.html");
+        // mainBtn3.setUrl("http://m.weigouyi.com/160623095250911019.html");
+        mainBtn3.setUrl("http://55841758.m.weimob.com/vshop/index");
 
 
         // CommonButton btn21 = new CommonButton();

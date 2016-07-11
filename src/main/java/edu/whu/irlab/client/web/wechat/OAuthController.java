@@ -35,7 +35,7 @@ public class OAuthController {
         String openId="";
         String accessToken = "";
 
-        openId=(String) request.getSession().getAttribute("openId");
+        // openId=(String) request.getSession().getAttribute("openId");
         // 用户同意授权
         if (code != null && (!code.equals(""))) {
             // 获取网页授权access_token
@@ -86,6 +86,26 @@ public class OAuthController {
         }else if (state.equals("topic")){
             System.out.println("OAuthController Go to topic: "+openId);
             return "redirect:/topic/list";
+        }else if (state.startsWith("joinVote")){
+            String eventinfoId = state.split(":")[1];
+            System.out.println("OAuthController Go to voteDetail: "+openId);
+            redirectAttributes.addAttribute("eventinfoId", eventinfoId);
+            return "redirect:/eventinfo/joinVote/"+eventinfoId;
+        }else if (state.startsWith("joinNotVote")){
+            String eventinfoId = state.split(":")[1];
+            System.out.println("OAuthController Go to notVoteDetail: "+openId);
+            redirectAttributes.addAttribute("eventinfoId", eventinfoId);
+            return "redirect:/eventinfo/joinNotVote/"+eventinfoId;
+        }else if (state.startsWith("joinPay")){
+            String eventinfoId = state.split(":")[1];
+            System.out.println("OAuthController Go to notVoteDetail (pay activity): "+openId);
+            redirectAttributes.addAttribute("eventinfoId", eventinfoId);
+            return "redirect:/eventinfo/joinPay/"+eventinfoId;
+        }else if (state.startsWith("testpay")){
+            String eventinfoId = state.split(":")[1];
+            System.out.println("OAuthController Go to testpay: "+openId);
+            System.out.println("eventinfoId="+eventinfoId);
+            return "redirect:/testpay/unifiedorder";
         }
         return null;
     }

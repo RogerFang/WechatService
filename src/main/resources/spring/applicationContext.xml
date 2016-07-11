@@ -13,7 +13,7 @@
             http://www.springframework.org/schema/data/jpa
             http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd">
 
-    <context:property-placeholder location="classpath*:properties/*.properties"/>
+    <context:property-placeholder location="classpath*:properties/config.properties, classpath:properties/wechat.properties"/>
 
     <!--注入@Repository、@Service、@Component-->
     <context:component-scan base-package="edu.whu.irlab">

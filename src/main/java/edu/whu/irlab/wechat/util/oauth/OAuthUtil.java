@@ -15,7 +15,10 @@ public class OAuthUtil {
 
     public static final String SERVICE_PATH = "http://roger.tunnel.qydev.com/WechatService";
 
-    public static final String appId = "wxe77e6cada6b7344f";
+    // roger 测试号
+    // public static final String appId = "wxe77e6cada6b7344f";
+    // herpink 服务号
+    public static final String appId = "wx61afb7c6dddd0806";
 
     public static void main(String[] args) {
 
@@ -28,6 +31,7 @@ public class OAuthUtil {
         String scope = SNSAPI_BASE_STATE;
 
         // 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值 （非必填）
+        // String state = "testpay:1";
         String state = "eventinfo";
 
         // 无论直接打开还是做页面302重定向时候，必须带此参数 （必填）
@@ -63,7 +67,7 @@ public class OAuthUtil {
      *            无论直接打开还是做页面302重定向时候，必须带此参数 （必填）
      * @return String
      */
-    public static String getOauthUrl(String appid, String url, String scope,
+    private static String getOauthUrl(String appid, String url, String scope,
                                      String state, String wechat_redirect) {
 
         // 结果： http%3A%2F%2Futown.ngrok.com%2FUTownWeChat%2FOAuthServlet
@@ -80,5 +84,21 @@ public class OAuthUtil {
                 + state
                 + "#" + wechat_redirect;
         return str;
+    }
+
+    public static String getOauthUrl(String state){
+// 要跳转的
+        String requestmapping = "/oauth";
+
+        // 所发布工程的服务器域名 + 工程名 + 要跳转的
+        String url = SERVICE_PATH + requestmapping;
+
+        String scope = SNSAPI_BASE_STATE;
+
+        // 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值 （非必填）
+
+        // 无论直接打开还是做页面302重定向时候，必须带此参数 （必填）
+        String wechat_redirect = "wechat_redirect";
+        return getOauthUrl(appId, url, scope, state, wechat_redirect);
     }
 }

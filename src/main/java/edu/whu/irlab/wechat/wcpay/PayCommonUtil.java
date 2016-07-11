@@ -56,6 +56,7 @@ public class PayCommonUtil {
 			}
 		}
 		sb.append("key=" + Configure.getKey());
+		System.out.println(sb.toString());
 		String sign = MD5Util.MD5Encode(sb.toString(), characterEncoding).toUpperCase();
 		return sign;
 	}

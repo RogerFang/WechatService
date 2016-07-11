@@ -4,10 +4,12 @@ import com.google.common.base.Joiner;
 import edu.whu.irlab.client.comparator.EventSignComparator;
 import edu.whu.irlab.client.entity.*;
 import edu.whu.irlab.client.service.*;
+import edu.whu.irlab.wechat.util.oauth.OAuthUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springside.modules.web.Servlets;
@@ -206,10 +208,22 @@ public class EventInfoController {
         model.addAttribute("eiPage", eiPage);
 
         model.addAttribute("today", new Date());
+
         if (event.getEventType().equals("3")){
             // 线上投票
+            String joinUrl = OAuthUtil.getOauthUrl("joinVote:"+id);
+            model.addAttribute("joinUrl", joinUrl);
             return "event/voteDetail";
         }else {
+            if (!event.getText2().equals("0")){
+                // 收费活动
+                String joinUrl = OAuthUtil.getOauthUrl("joinPay:"+id);
+                // String joinUrl = "http://roger.tunnel.qydev.com/WechatService/testpay/payindex";
+                model.addAttribute("joinUrl", joinUrl);
+                return "event/notVoteDetail";
+            }
+            String joinUrl = OAuthUtil.getOauthUrl("joinNotVote:"+id);
+            model.addAttribute("joinUrl", joinUrl);
             return "event/notVoteDetail";
         }
     }
@@ -332,14 +346,40 @@ public class EventInfoController {
     }
 
     /**
+     * 判断 用户 是否可以报名活动(不能重复报名)
+     * @param id 活动event id
+     * @param session
+     * @return
+     */
+    @RequestMapping(value = "/checkJoin/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String, Object> checkJoin(@PathVariable Integer id,
+                                         HttpSession session){
+        Map<String, Object> map = new HashMap<>();
+        WechatUser wechatUser = userService.findWechatUserByOpenId((String) session.getAttribute("openId"));
+        APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
+        if (eventSignService.findByEventIdAndEventSignCreator(id, appUser)==null){
+            map.put("success", true);
+        }else {
+            map.put("success", false);
+        }
+        return map;
+    }
+
+    /**
      * 参加非投票活动报名
      * @param id
      * @param model
      * @return
      */
     @RequestMapping(value = "/joinNotVote/{id}", method = RequestMethod.GET)
-    public String joinNotVoteActivity(@PathVariable Integer id,
+    public String joinNotVoteActivity(String openId,
+                                      HttpSession session,
+                                      @PathVariable Integer id,
                                       Model model){
+        if (openId != null){
+            session.setAttribute("openId", openId);
+        }
         model.addAttribute("eventId", id);
         return "event/joinNotVoteActivity";
     }
@@ -377,6 +417,60 @@ public class EventInfoController {
         return map;
     }
 
+    @RequestMapping(value = "/joinPay/{id}", method = RequestMethod.GET)
+    public String joinPayActivity(String openId,
+                                      HttpSession session,
+                                      @PathVariable Integer id,
+                                      Model model){
+        if (session.getAttribute("openId") != null){
+            openId = (String) session.getAttribute("openId");
+        }else {
+            if (openId != null){
+                session.setAttribute("openId", openId);
+            }
+        }
+        WechatUser wechatUser = userService.findWechatUserByOpenId(openId);
+        APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
+        EventInfo event = eiService.findEntity(id);
+        model.addAttribute("fee", event.getText2());
+        model.addAttribute("username", appUser.getUserName());
+        model.addAttribute("eventId", id);
+        return "event/joinPayActivity";
+    }
+
+    @RequestMapping(value = "/joinPay/{id}", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, String> joinPayActivity(@PathVariable Integer id,
+                                               String mobile,
+                                               HttpSession session){
+        Map<String, String> map = new HashMap<>();
+
+        WechatUser wechatUser = userService.findWechatUserByOpenId((String) session.getAttribute("openId"));
+        APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
+        if (eventSignService.findByEventIdAndEventSignCreator(id, appUser)==null){
+            EventSign eventSign = new EventSign();
+            eventSign.setEventId(id);
+            // eventSign.setEventSignPic();
+            eventSign.setEventSignCreator(appUser);
+            eventSign.setEventSignCreatetime(new Date());
+            // 可用
+            eventSign.setEventSignStatus("1");
+            // 审核中
+            eventSign.setEventSignProcess("1");
+            eventSign.setEventSignPraise("0");
+            eventSign.setEventUpdatetime(new Date());
+            eventSign.setEventMobile(mobile);
+            eventSign.setEventSignPic("");
+
+            eventSignService.save(eventSign);
+            map.put("msg", "恭喜您, 报名成功！");
+        }else {
+            map.put("msg", "请勿重复报名!");
+        }
+
+        return map;
+    }
+
     /**
      * 参加投票活动报名
      * @param id
@@ -384,8 +478,13 @@ public class EventInfoController {
      * @return
      */
     @RequestMapping(value = "/joinVote/{id}", method = RequestMethod.GET)
-    public String joinVoteActivity(@PathVariable Integer id,
+    public String joinVoteActivity(String openId,
+                                   HttpSession session,
+                                   @PathVariable Integer id,
                                    Model model){
+        if (openId != null){
+            session.setAttribute("openId", openId);
+        }
         model.addAttribute("eventId", id);
         return "event/joinVoteActivity";
     }

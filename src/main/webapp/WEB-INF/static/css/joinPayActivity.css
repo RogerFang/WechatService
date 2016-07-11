@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: weui;
+}
+
+#header{
+    padding: 5px 0;
+    width: 100%;
+    background-color: #f24166;
+}
+
+#header .title{
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}
+
+#header .title a{
+    float: right;
+    font-size:14px;
+    font-weight: 400;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    cursor: pointer;
+    color:#ffffff;
+    background: none;
+    border: none;
+}
+
+#header .title span{
+    margin-left: 50px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+#joinActivity{
+    padding: 10px;
+}
+
+#joinActivity p{
+    color: #f24166;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+#joinActivity label{
+    font-size: 14px;
+}
+
+#joinActivity input{
+    padding:5px;
+    line-height: 16px;
+    font-size: 12px;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+}
+
+#payforActivity{
+    padding: 5%;
+    color: #333333;
+}
+
+#payforActivity div:first-child p:last-child{
+    margin: 10px 0;
+}
+
+#payforActivity div:first-child p:last-child span{
+    color: #FD8260;
+}
+
+#payforActivity div:nth-child(2){
+    padding: 10px 50px;
+    background: url("../img/wexin.png") no-repeat 0 center;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+#payforActivity div:nth-child(2) p:last-child{
+    color: #9FA0A0;
+    font-size: 12px;
+}
+
+#footer button{
+    background-color: #f24166;
+    font-size: 14px;
+}
+
+#footer{
+    position: fixed;
+    bottom:10px;
+    width: 90%;
+    left: 5%;
+}
+
+.weui_dialog .weui_dialog_ft a{
+    color: #f24166;
+    font-size: 14px;
+}

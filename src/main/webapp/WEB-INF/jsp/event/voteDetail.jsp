@@ -140,7 +140,7 @@
                 <div class="vote"><a href="${ctx}/eventinfo/vote/${event.id}">我要投票</a></div>
             </div>
             <div class="weui-col-25">
-                <div class="join"><a href="${ctx}/eventinfo/joinVote/${event.id}">我要报名</a></div>
+                <div class="join"><a href="${joinUrl}" onclick="return checkJoin();">我要报名</a></div>
             </div>
         </div>
     </c:if>
@@ -164,6 +164,25 @@
                 }
             }
         });
+    }
+
+    // 判断该用户是否可以报名参加活动
+    function checkJoin() {
+        var result = false;
+        $.ajax({
+            url:"${ctx}/eventinfo/checkJoin/"+${event.id},
+            type:"GET",
+            async:false,
+            success:function (data) {
+                if (data.success){
+                    result = true;
+                }else{
+                    $.alert("亲,请勿重复报名哦!")
+                    result = false;
+                }
+            }
+        });
+        return result;
     }
 </script>
 </body>
