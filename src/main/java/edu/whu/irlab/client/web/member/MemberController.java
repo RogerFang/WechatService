@@ -51,6 +51,9 @@ public class MemberController {
     public String member(String openId,
                          HttpSession session,
                          Model model){
+        if (openId!=null){
+            session.setAttribute("openId", openId);
+        }
         WechatUser wechatUser = userService.findWechatUserByOpenId(openId);
         APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
         model.addAttribute("user", appUser);
@@ -163,9 +166,11 @@ public class MemberController {
     public String login(BaseUser user,
                         HttpSession session,
                         RedirectAttributes redirectAttributes){
-        user.setOpenId((String) session.getAttribute("openId"));
+        String openId = (String) session.getAttribute("openId");
+        user.setOpenId(openId);
         Map<String, Object> map = userService.loginUser(user);
         if ((Boolean) map.get("success")){
+            redirectAttributes.addAttribute("openId", openId);
             return "redirect:/member";
         }else {
             redirectAttributes.addFlashAttribute("msg", map.get("msg"));

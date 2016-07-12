@@ -171,13 +171,13 @@
         var result = false;
         $.ajax({
             url:"${ctx}/eventinfo/checkJoin/"+${event.id},
-            type:"GET",
+            type:"POST",
             async:false,
             success:function (data) {
                 if (data.success){
                     result = true;
                 }else{
-                    $.alert("亲,请勿重复报名哦!")
+                    $.alert(data.msg)
                     result = false;
                 }
             }

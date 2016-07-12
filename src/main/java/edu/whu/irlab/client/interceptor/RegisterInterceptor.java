@@ -27,9 +27,9 @@ public class RegisterInterceptor extends HandlerInterceptorAdapter {
         String requestOpenId = request.getParameter("openId");
         String sessionOpenId = (String) request.getSession().getAttribute("openId");
 
-        String method = request.getMethod();
+        String method = request.getMethod().toUpperCase();
 
-        if (method.toUpperCase().equals("POST")){
+        if (method.equals("POST")){
             return super.preHandle(request, response, handler);
         }
 

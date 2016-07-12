@@ -351,17 +351,25 @@ public class EventInfoController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/checkJoin/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/checkJoin/{id}", method = RequestMethod.POST)
     @ResponseBody
     public Map<String, Object> checkJoin(@PathVariable Integer id,
                                          HttpSession session){
         Map<String, Object> map = new HashMap<>();
         WechatUser wechatUser = userService.findWechatUserByOpenId((String) session.getAttribute("openId"));
+
+        if (wechatUser == null){
+            map.put("success", false);
+            map.put("msg", "请先到【会员】注册!");
+            return map;
+        }
+
         APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
         if (eventSignService.findByEventIdAndEventSignCreator(id, appUser)==null){
             map.put("success", true);
         }else {
             map.put("success", false);
+            map.put("msg", "亲,请勿重复报名哦!");
         }
         return map;
     }
