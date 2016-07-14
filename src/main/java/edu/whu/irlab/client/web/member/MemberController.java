@@ -53,6 +53,8 @@ public class MemberController {
                          Model model){
         if (openId!=null){
             session.setAttribute("openId", openId);
+        }else {
+            openId = (String) session.getAttribute("openId");
         }
         WechatUser wechatUser = userService.findWechatUserByOpenId(openId);
         APPUser appUser = userService.findAPPUserByAppId(wechatUser.getAppId());
@@ -135,7 +137,7 @@ public class MemberController {
                            HttpSession session){
         if (bindingResult.hasErrors()){
             System.out.println(bindingResult.getErrorCount());
-            return "redirect: register";
+            return "redirect:register";
         }
         user.setOpenId((String) session.getAttribute("openId"));
         System.out.println(user.getMobile());
@@ -176,6 +178,36 @@ public class MemberController {
             redirectAttributes.addFlashAttribute("msg", map.get("msg"));
             return "redirect:login";
         }
+    }
+
+    /**
+     * 找回密码
+     * @return
+     */
+    @RequestMapping(value = "/findPsd", method = RequestMethod.GET)
+    public String findPsd(){
+        return "member/findPsd";
+    }
+
+    @RequestMapping(value = "/findPsd", method = RequestMethod.POST)
+    public String findPsd(@Valid BaseUser user,
+                        BindingResult bindingResult,
+                          RedirectAttributes redirectAttributes,
+                        HttpSession session){
+        if (bindingResult.hasErrors()){
+            System.out.println(bindingResult.getErrorCount());
+            return "redirect:findPsd";
+        }
+
+        if (userService.findAPPUserByMobile(user.getMobile())==null){
+            System.out.println("该手机未注册");
+            redirectAttributes.addFlashAttribute("msg", "该手机号未注册");
+            return "redirect:findPsd";
+        }
+
+        user.setOpenId((String) session.getAttribute("openId"));
+        userService.findPsd(user);
+        return "redirect:/member";
     }
 
     /**

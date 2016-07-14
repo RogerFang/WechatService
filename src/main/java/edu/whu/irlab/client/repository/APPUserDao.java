@@ -34,4 +34,9 @@ public interface APPUserDao extends PagingAndSortingRepository<APPUser, Integer>
     @Modifying
     @Query("update APPUser user set user.userName = ?1 where user.id = ?2")
     int updateUsername(String username, Integer id);
+
+    @Transactional
+    @Modifying
+    @Query("update APPUser user set user.password =?1 where user.id = ?2")
+    int updatePsd(String psd, Integer id);
 }

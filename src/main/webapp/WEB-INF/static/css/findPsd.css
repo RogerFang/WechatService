@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header .title{
+    background-color: #F25376;
+    text-align: center;
+    color: #fff;
+    font-family: weui;
+    font-weight: 700;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#retrievePassword div.msg input{
+    width: 95%;
+    margin: 0px auto;
+    display: inline-block;
+    padding: 5px 0;
+    /*text-align: center;*/
+    border-radius: 5px;
+    font-family: weui;
+    border: none;
+    height: 20px;
+}
+
+#retrievePassword button{
+    width: 95%;
+    background-color: #F24166;
+    line-height: 2;
+    cursor: pointer;
+}
+
+#retrievePassword > span{
+    color:#FFBE00;
+    display: block;
+    text-align: center;
+}
+
+#msgValidation a{
+    border: 1px solid rgba(242,65,102, 1);
+    color: #F24166;
+}
+
+#retrievePassword div.msg{
+    border: 1px solid #d1d1d5;
+    width: 95%;
+    margin: 20px auto;
+    font-size:14px;
+}
+
+#retrievePassword div span{
+    background: url("../img/delete.gif") no-repeat center;
+    height: 11px;
+    width: 11px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#retrievePassword #msgValidation{
+    width: 95%;
+    margin: 20px auto;
+    font-family: weui;
+}
+
+#retrievePassword #msgValidation div{
+    border: 1px solid #d1d1d5;
+    width: 58%;
+    margin-right: 2%;
+}
+
+#retrievePassword #msgValidation input{
+    width:100%;
+    padding: 5px 0;
+    border: none;
+    font-size:14px;
+    /*text-align: center;*/
+}
+
+#retrievePassword #msgValidation a{
+    display: inline-block;
+    width: 40%;
+    font-size: 12px;
+    border-radius:0;
+    font-family: weui;
+}
+
+#retrievePassword #msgValidation a.inMsg{
+    border: 1px solid rgba(223,223,223, 1);
+    color: #DFDFDF;
+    border-radius:0;
+}
+
+#retrievePassword #msgValidation a::after{
+    border: 1px solid rgba(0, 0, 0, 0)
+}
+
+
+.weui_btn_dialog.primary{
+    color:#f24166;
+    font-family:weui;
+}

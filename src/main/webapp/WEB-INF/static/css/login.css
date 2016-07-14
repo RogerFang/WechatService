@@ -65,5 +65,16 @@
     display: block;
     text-align: center;
     margin: 10px;
+    overflow:hidden;
+    padding:0 10px;
 }
+
+#info a:first-child{
+    float:left;
+}
+
+#info a:last-child{
+    float:right;
+}
+
 

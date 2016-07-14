@@ -30,9 +30,10 @@
 
             <mvc:exclude-mapping path="/member/login" />
             <mvc:exclude-mapping path="/member/register" />
+            <mvc:exclude-mapping path="/member/findPsd" />
 
             <mvc:exclude-mapping path="/topic/list" />
-            <mvc:exclude-mapping path="/topic/detail" />
+            <mvc:exclude-mapping path="/topic/detail/**" />
 
             <mvc:exclude-mapping path="/eventinfo/list" />
             <mvc:exclude-mapping path="/eventinfo/loadList" />

@@ -61,8 +61,8 @@ public class TopicInfoController {
      * @param model
      * @return
      */
-    @RequestMapping(value = "/detail")
-    public String detail(@RequestParam(value = "id") int id,
+    @RequestMapping(value = "/detail/{id}")
+    public String detail(@PathVariable Integer id,
                          @RequestParam(value = "page", defaultValue = "1") int pageNumber,
                          @RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize, ServletRequest request,
                          Model model) {

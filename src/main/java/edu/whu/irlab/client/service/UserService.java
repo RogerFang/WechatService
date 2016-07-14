@@ -12,33 +12,35 @@ import java.util.Map;
 /**
  * Created by Roger on 2016/5/22.
  */
-public interface UserService {
+ public interface UserService {
 
-    // public APPUser findById(Integer id);
+    //  APPUser findById(Integer id);
 
-    // public APPUser findByUsername(String username);
+    //  APPUser findByUsername(String username);
 
-    public APPUser findAPPUserByMobile(String mobile);
+     APPUser findAPPUserByMobile(String mobile);
 
-    public APPUser findAPPUserByAppId(Integer appId);
+     APPUser findAPPUserByAppId(Integer appId);
 
-    public void registerUser(BaseUser user);
+     void registerUser(BaseUser user);
 
-    public Map<String, Object> loginUser(BaseUser user);
+     Map<String, Object> loginUser(BaseUser user);
 
-    public WechatUser findWechatUserByMobile(String mobile);
+     WechatUser findWechatUserByMobile(String mobile);
 
-    public WechatUser findWechatUserByOpenId(String openId);
+     WechatUser findWechatUserByOpenId(String openId);
 
-    public int completeInfo(APPUser appUser);
+     int completeInfo(APPUser appUser);
 
-    public int updateUserPhoto(String userPhoto, Integer appId);
+     int updateUserPhoto(String userPhoto, Integer appId);
 
-    public List<APPUser> findFriend(APPUser appUser);
+     List<APPUser> findFriend(APPUser appUser);
 
-    public Page<APPUser> findFriend(int pageNumber, int pageSize, APPUser appUser);
+     Page<APPUser> findFriend(int pageNumber, int pageSize, APPUser appUser);
 
-    public Page<APPUserFriend> getMyFriend(int pageNumber, int pageSize, APPUser appUser);
+     Page<APPUserFriend> getMyFriend(int pageNumber, int pageSize, APPUser appUser);
 
-    public int updateUsername(APPUser appUser);
+     int updateUsername(APPUser appUser);
+
+    void findPsd(BaseUser baseUser);
 }

@@ -207,4 +207,33 @@ public class UserServiceImpl implements UserService{
     public int updateUsername(APPUser appUser) {
         return appUserDao.updateUsername(appUser.getUserName(), appUser.getId());
     }
+
+    @Override
+    public void findPsd(BaseUser user) {
+        String mobile = user.getMobile();
+        APPUser appUser = appUserDao.findByMobileAndEnabled(mobile, 1);
+        WechatUser wechatUser = wechatUserDao.findByMobile(mobile);
+        if (wechatUser!=null){
+            System.out.println("WechatUser: 该用户已注册");
+            return;
+        }
+
+        if (appUser!=null){
+            appUser.setPassword(user.getPassword());
+            entryptPassword(appUser);
+
+            appUserDao.updatePsd(appUser.getPassword(), appUser.getId());
+            System.out.println("APPUser: 找回密码!");
+        }else {
+            System.out.println("APPUser: 不存在该用户!");
+            return;
+        }
+        wechatUser = new WechatUser();
+        wechatUser.setOpenId(user.getOpenId());
+        wechatUser.setAppId(appUser.getId());
+        wechatUser.setMobile(mobile);
+        wechatUser.setCreateTime(new Date());
+        wechatUserDao.save(wechatUser);
+        System.out.println("WechatUser: 注册该用户");
+    }
 }

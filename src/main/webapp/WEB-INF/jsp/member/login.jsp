@@ -12,7 +12,7 @@
     <meta name="decorator" content="default">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>会员登录</title>
+    <%--<title>会员登录</title>--%>
     <link rel="stylesheet" href="${ctx}/css/login.css" type="text/css">
     <style>
         .weui_btn_dialog.primary{
@@ -34,7 +34,7 @@
         </form>
         <div id="info">
             <a href="${ctx}/member/register" style="color: #F24166;">注册Herpink会员</a>
-            <!--<a href="#" style="color: #F24166;">找回密码</a>-->
+            <a href="${ctx}/member/findPsd" style="color: #F24166;">找回密码</a>
         </div>
         <span>${msg}</span>
     </div>

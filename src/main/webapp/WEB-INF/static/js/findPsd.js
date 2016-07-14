@@ -1,39 +1,17 @@
 /**
- * Created by Administrator on 2016/6/25.
+ * Created by Roger on 2016/7/14.
  */
-window.onload=function(){
-    //页面进入效果
-    $marginTop=($(window).height()-$("#ageSelect").height())/2;
-    $("#ageSelect").css({"margin-top":$marginTop});
-    setTimeout(function(){
-        $("#introduce").animate({marginTop:"-=151px"},1500,function(){
-            $("#ageSelectItem").slideDown("slow");
-        })
-    },1000)
-
-    //点击进入注册页面效果
-    $("#ageSelectItem a").click(function(){
-        $("#ageSelect").fadeOut("slow",function(){
-            $(document.body).css({"background":"#FFFFFF"});
-            $("#register").fadeIn("slow");
-        });
-    })
-
-    //单选框效果
-    $(".radioclass").click(function(){
-        $(this).find("span").addClass("on")
-            .find("input").attr("checked","checked");
-        $(this).siblings(".radioclass").find("span").removeClass("on")
-            .find("input").removeAttr("checked");
-    })
-
+/**
+ * Created by Administrator on 2016/7/14.
+ */
+$(document).ready(function(){
     //短信验证倒计时效果
     $("#msgValidation a").click(inMsgValidation);
     var time=0;
     var countTimer=null;
     var code;
     function inMsgValidation(){
-        var $phonenum=$("#registerContent input[name=mobile]");
+        var $phonenum=$("#retrievePassword input[name=mobile]");
         var pattern= /^[0-9]*$/;
         if($phonenum.val().length<11||!pattern.test($phonenum.val())){
             $.alert("请输入正确的11位手机号码","");
@@ -70,11 +48,10 @@ window.onload=function(){
     //注册表单信息验证
     $("form").submit(function(){
         var pattern= /^[0-9]*$/;
-        var $phonenum=$("#registerContent input[name=mobile]");
-        var $password=$("#registerContent input[name=password]");
-        var $captcha=$("#registerContent input[name=captcha]");
-        var $confirmpassword=$("#registerContent input[name=confirmpassword]");
-        var $checkbox=$("#registerContent input[type='checkbox']");
+        var $phonenum=$("#retrievePassword input[name=mobile]");
+        var $password=$("#retrievePassword input[name=password]");
+        var $captcha=$("#retrievePassword input[name=captcha]");
+        var $confirmpassword=$("#retrievePassword input[name=confirmpassword]");
         if($phonenum.val().length<11||!pattern.test($phonenum.val())){
             $.alert("请输入正确的11位手机号码","");
             return false;
@@ -93,11 +70,8 @@ window.onload=function(){
         }else if($confirmpassword.val()!==$password.val()){
             $.alert("密码不一致，请重新确认密码","");
             return false;
-        }else if(!$checkbox.is(':checked')){
-            $.alert("请阅读并同意用户协议","");
-            return false;
         }else{
-            $.alert("恭喜您已成功注册Herpink会员","");
+            $.alert("重新设置密码成功!","");
             return true;
         }
     })
@@ -113,4 +87,5 @@ window.onload=function(){
         $(this).siblings('input').val('');
         $(this).remove();
     })
-}
+
+})

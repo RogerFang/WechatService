@@ -12,7 +12,7 @@
     <meta name="decorator" content="default">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <title>会员注册</title>
+    <%--<title>会员注册</title>--%>
     <link rel="stylesheet" href="${ctx}/css/register.css" type="text/css">
 </head>
 <body>

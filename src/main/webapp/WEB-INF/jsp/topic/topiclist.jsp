@@ -26,7 +26,7 @@
 							<p><fmt:formatDate value="${topic.topicCreatetime}" pattern="yyyy-MM-dd HH:mm" /></p>
 						</div>
 					</div>
-					<a href="${ctx}/topic/detail?id=${topic.id}" style="margin-top: 0;">
+					<a href="${ctx}/topic/detail/${topic.id}" style="margin-top: 0;">
 						<div class="topicContent">
 							<p>${topic.mediumContent}</p>
 							<%--<c:if test="${not empty topic.descPic}">
@@ -40,7 +40,7 @@
 						</div>
 					</a>
 					<div class="topicFooter weui-row">
-						<span class="weui-col-50"><a href="${ctx}/topic/detail?id=${topic.id}">评论(${topic.topicCommentCount})</a></span>
+						<span class="weui-col-50"><a href="${ctx}/topic/detail/${topic.id}">评论(${topic.topicCommentCount})</a></span>
 						<span class="weui-col-50"><a id="praise-${topic.id}" onclick="praise(${topic.id})">${topic.topicPraiseCount}</a></span>
 					</div>
 				</li>
