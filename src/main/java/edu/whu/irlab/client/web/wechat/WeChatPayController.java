@@ -48,19 +48,25 @@ public class WeChatPayController {
 
         parameters.put("mch_id", Configure.getMchid());
         parameters.put("nonce_str", PayCommonUtil.CreateNoncestr());
-        parameters.put("body", event.getEventTitle());
+        // parameters.put("body", event.getEventTitle());
+        parameters.put("body", "body_content");
         parameters.put("out_trade_no", Long.toString(new Date().getTime()));
-        parameters.put("total_fee", "1");
-        // parameters.put("total_fee", fee);
+        // parameters.put("total_fee", "1");
+        parameters.put("total_fee", fee);
+        //119.10.9.247
         parameters.put("spbill_create_ip", "127.0.0.1");
-        // parameters.put("notify_url", "http://roger.tunnel.qydev.com/WechatService/testpay/notify");
         parameters.put("notify_url", "h");
+        // parameters.put("notify_url", "h");
         parameters.put("trade_type", "JSAPI");
         parameters.put("openid", openId);
         //根据API给的签名规则进行签名
         String sign = PayCommonUtil.createSign("UTF-8", parameters);
         parameters.put("sign", sign);
-
+        // System.out.println("unifiedorder:" + sign);
+        System.out.println("======================================");
+        for (Map.Entry<Object, Object> entry: parameters.entrySet()){
+            System.out.println(entry.getKey()+"\t"+entry.getValue());
+        }
         String requestXML = PayCommonUtil.getRequestXml(parameters);
         System.out.println("requestXML: " + requestXML);
         String resultXml = CommonUtil.httpsRequestStr(Configure.UNIFIED_ORDER_URL, "POST", requestXML);
@@ -85,6 +91,7 @@ public class WeChatPayController {
         for (Map.Entry<Object, Object> entry: params.entrySet()){
             System.out.println(entry.getKey()+"\t"+entry.getValue());
         }
+        System.out.println("======================================");
         return params;
     }
 }

@@ -40,7 +40,7 @@ public class MenuManagerUtil {
         // roger 测试号
         // btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
         // herpink 服务号
-        btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
+        btn11.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Fwww.herpink.cn%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=member#wechat_redirect");
 
         ViewButton btn12 = new ViewButton();
         btn12.setType("view");
@@ -48,7 +48,7 @@ public class MenuManagerUtil {
         // roger 测试号
         // btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
         // herpink 服务号
-        btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
+        btn12.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Fwww.herpink.cn%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=topic#wechat_redirect");
 
         ViewButton btn13 = new ViewButton();
         btn13.setType("view");
@@ -56,18 +56,18 @@ public class MenuManagerUtil {
         // roger 测试号
         // btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
         // herpink 服务号
-        btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
+        btn13.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Fwww.herpink.cn%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=findFriend#wechat_redirect");
 
         ViewButton btn14 = new ViewButton();
         btn14.setType("view");
         btn14.setName("app下载");
         btn14.setUrl("http://a.app.qq.com/o/simple.jsp?pkgname=com.kaiyitech.ipink");
 
-        ViewButton btn15 = new ViewButton();
-        btn15.setType("view");
-        btn15.setName("testpay");
+        // ViewButton btn15 = new ViewButton();
+        // btn15.setType("view");
+        // btn15.setName("testpay");
         // btn15.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=testpay:1#wechat_redirect");
-        btn15.setUrl("http://roger.tunnel.qydev.com/WechatService/testpay/payindex");
+        // btn15.setUrl("http://www.herpink.cn/WechatService/testpay/payindex");
 
         ComplexButton mainBtn1 = new ComplexButton();
         mainBtn1.setName("姐妹会员");
@@ -78,12 +78,11 @@ public class MenuManagerUtil {
         mainBtn2.setType("view");
         mainBtn2.setName("粉蜜社交");
         // mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxe77e6cada6b7344f&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
-        mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Froger.tunnel.qydev.com%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
+        mainBtn2.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx61afb7c6dddd0806&redirect_uri=http%3A%2F%2Fwww.herpink.cn%2FWechatService%2Foauth&response_type=code&scope=snsapi_base&state=eventinfo#wechat_redirect");
 
         ViewButton mainBtn3 = new ViewButton();
         mainBtn3.setType("view");
-        mainBtn3.setName("粉蜜商城");
-        // mainBtn3.setUrl("http://m.weigouyi.com/160623095250911019.html");
+        mainBtn3.setName("粉蜜潮品");
         mainBtn3.setUrl("http://55841758.m.weimob.com/vshop/index");
 
 

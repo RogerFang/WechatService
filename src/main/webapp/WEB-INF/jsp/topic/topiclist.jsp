@@ -95,7 +95,7 @@
 										'<p>'+topic.formatTopicCreatetime+'</p>' +
 										'</div>' +
 										'</div>' +
-										'<a href="detail?id='+topic.id+'" style="margin-top: 0;">' +
+										'<a href="detail/'+topic.id+'" style="margin-top: 0;">' +
 										'<div class="topicContent">' +
 										'<p>'+topic.mediumContent+'</p>' +
 										'<img src="http://herpink.cn:8080/pinknetpic/'+topic.descPic+'" style="display: none" onload="this.style.display=\'\'">' +
@@ -103,7 +103,7 @@
 										'</div>' +
 										'</a>' +
 										'<div class="topicFooter weui-row">' +
-										'<span class="weui-col-50"><a href="detail?id='+topic.id+'">评论('+topic.topicCommentCount+')</a></span>' +
+										'<span class="weui-col-50"><a href="detail/'+topic.id+'">评论('+topic.topicCommentCount+')</a></span>' +
 										'<span class="weui-col-50"><a id="praise-'+topic.id+'" onclick="praise('+topic.id+')">'+topic.topicPraiseCount+'</a></span>' +
 										'</div>' +
 										'</li>';

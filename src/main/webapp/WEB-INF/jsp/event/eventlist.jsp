@@ -18,7 +18,7 @@
 <body>
 <div id="wrapper">
     <div id="header">
-        <p class="title"><span>粉蜜活动</span><a href="${ctx}/eventinfo/release" id="post"></a></p>
+        <p class="title"><span>粉蜜社交</span><a href="${ctx}/eventinfo/release" id="post"></a></p>
     </div>
 
     <div class="bd">
@@ -277,7 +277,7 @@
                                 <span>${ei.eventMemberCount}人已参加</span>
                                 <span>
                                     <c:choose>
-                                        <c:when test="${ei.text2 eq 0}">
+                                        <c:when test="${ei.text2 eq '0'}">
                                             免费
                                         </c:when>
                                         <c:otherwise>

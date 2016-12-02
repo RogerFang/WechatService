@@ -1,6 +1,5 @@
 package edu.whu.irlab.wechat.service.impl;
 
-import edu.whu.irlab.wechat.model.Parameter;
 import edu.whu.irlab.wechat.model.response.Article;
 import edu.whu.irlab.wechat.model.response.NewsMessage;
 import edu.whu.irlab.wechat.model.response.TextMessage;
@@ -8,11 +7,9 @@ import edu.whu.irlab.wechat.service.WeChatService;
 import edu.whu.irlab.wechat.util.MessageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -23,9 +20,6 @@ import java.util.Map;
 @Service
 public class WeChatServiceImpl implements WeChatService {
     private static Logger logger = LoggerFactory.getLogger(WeChatServiceImpl.class);
-
-    @Autowired
-    private Parameter parameter;
 
     public String processRequest(HttpServletRequest request) throws Exception {
         String respMessage = null;
@@ -46,7 +40,7 @@ public class WeChatServiceImpl implements WeChatService {
                 String eventType = requestMap.get("Event");
                 // 订阅
                 if (eventType.equals(MessageUtil.EVENT_TYPE_SUBSCRIBE)) {
-                    String respContent = "Thank you for you subscribe";
+                    String respContent = "欢迎加入Herpink!";
                     // 回复文本消息
                     TextMessage textMessage = new TextMessage();
                     textMessage.setToUserName(fromUserName);
@@ -59,7 +53,7 @@ public class WeChatServiceImpl implements WeChatService {
                 // 自定义菜单点击事件
                 else if (eventType.equals(MessageUtil.EVENT_TYPE_CLICK)) {
                     String eventKey = requestMap.get("EventKey");
-                    if (eventKey.equals("enroll")){
+                    /*if (eventKey.equals("enroll")){
                         String openId = fromUserName;
                         List<Article> articleList = new ArrayList<Article>();
                         Article article = new Article();
@@ -71,19 +65,13 @@ public class WeChatServiceImpl implements WeChatService {
                         System.out.println("article url:"+ parameter.getServicePath() + "/toEnroll?openId=" + openId);
                         articleList.add(article);
                         respMessage = makeArticle(articleList, fromUserName, toUserName);
-                    }
+                    }*/
                 }else if (eventType.equals(MessageUtil.EVENT_TYPE_VIEW)){
                     String openId = fromUserName;
                     String eventKey = requestMap.get("EventKey");
 //                    request.setAttribute("openId", openId);
 //                    request.getSession().setAttribute("openId", openId);
                     System.out.println("VIEW openId:" + openId + "  eventKey:" + eventKey);
-                }
-            }else if(msgType.equals(MessageUtil.REQ_TYPE_TEXT)){
-                // 用户发过来的文本
-                String reqContent = requestMap.get("Content").toLowerCase();
-                if (reqContent.equals("openid")){
-                    respMessage = makeText(fromUserName, toUserName, "亲,请先报名参加活动并分享3次再领奖哦!");
                 }
             }
         } catch (Exception e) {

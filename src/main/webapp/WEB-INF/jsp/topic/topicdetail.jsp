@@ -6,7 +6,7 @@
 <head>
 	<meta name="decorator" content="default">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-	<%--<title>【话题】女人悄悄话-粉蜜话题-herpink粉红网</title>--%>
+	<title>【蜜语】${topicInfo.topicContent}</title>
 
 	<link href="${ctx}/css/topicDetail.css" rel="stylesheet" type="text/css">
 </head>
@@ -80,9 +80,9 @@
 		</form>
 	</div>
 
-	<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<%--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>--%>
 	<script>
-		$(document).ready(function() {
+		/*$(document).ready(function() {
 			$.ajax({
 				type: "post",
 				url: '${ctx}/getWeChatConfig',
@@ -123,7 +123,7 @@
 
 		function shareSuccess() {
 			$.alert("分享成功!");
-		}
+		}*/
 
 
 		function commentAjax() {

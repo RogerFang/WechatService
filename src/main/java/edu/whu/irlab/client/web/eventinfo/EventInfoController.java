@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springside.modules.web.Servlets;
@@ -64,7 +63,13 @@ public class EventInfoController {
     @RequestMapping(value = "list", method = RequestMethod.GET)
     public String entry(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
                         @RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize,
+                        String openId,
+                        HttpSession session,
                         Model model) {
+        if (openId != null){
+            session.setAttribute("openId", openId);
+        }
+
         Page<EventInfo> eiPage = eiService.getEventsList(pageNumber, pageSize);
         model.addAttribute("eiPage", eiPage);
         model.addAttribute("page", pageNumber);

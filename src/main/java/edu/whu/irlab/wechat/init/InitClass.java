@@ -1,6 +1,7 @@
 package edu.whu.irlab.wechat.init;
 
 
+import edu.whu.irlab.wechat.common.Configure;
 import edu.whu.irlab.wechat.util.thread.TokenThread;
 
 /**
@@ -12,9 +13,9 @@ public class InitClass {
     private String appId;
     private String appSecret;
 
-    public InitClass(String appId, String appSecret){
-        this.appId = appId;
-        this.appSecret = appSecret;
+    public InitClass(){
+        this.appId = Configure.getAppid();
+        this.appSecret = Configure.getAppSecret();
     }
 
     public void init(){

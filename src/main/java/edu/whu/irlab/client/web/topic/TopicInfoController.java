@@ -118,7 +118,13 @@ public class TopicInfoController {
     @RequestMapping(value = "/list")
     public String listWithPara(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
                                @RequestParam(value = "page.size", defaultValue = PAGE_SIZE) int pageSize,
-                               Model model) {
+                               Model model,
+                               String openId,
+                               HttpSession session) {
+        if (openId != null){
+            session.setAttribute("openId", openId);
+        }
+
         Page<TopicInfo> tiPage = tiService.getList(pageNumber, pageSize);
         model.addAttribute("tiPage", tiPage);
         model.addAttribute("page", pageNumber);

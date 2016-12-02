@@ -13,7 +13,8 @@ public class OAuthUtil {
     //弹出授权页面，可通过openid拿到昵称、性别、所在地。并且，即使在未关注的情况下，只要用户授权，也能获取其信息
     public static final String SNSAPI_USERINFO_STATE = "snsapi_userinfo";
 
-    public static final String SERVICE_PATH = "http://roger.tunnel.qydev.com/WechatService";
+    // public static final String SERVICE_PATH = "http://roger.tunnel.qydev.com/WechatService";
+    public static final String SERVICE_PATH = "http://www.herpink.cn/WechatService";
 
     // roger 测试号
     // public static final String appId = "wxe77e6cada6b7344f";
@@ -32,7 +33,10 @@ public class OAuthUtil {
 
         // 重定向后会带上state参数，开发者可以填写a-zA-Z0-9的参数值 （非必填）
         // String state = "testpay:1";
-        String state = "findFriend";
+        // String state = "member";
+        // String state = "topic";
+        // String state = "findFriend";
+        String state = "register";
 
         // 无论直接打开还是做页面302重定向时候，必须带此参数 （必填）
         String wechat_redirect = "wechat_redirect";

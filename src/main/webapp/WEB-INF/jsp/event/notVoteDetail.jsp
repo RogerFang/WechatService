@@ -12,7 +12,7 @@
     <meta name="decorator" content="default">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <%--<title>活动详情</title>--%>
+    <title>【粉蜜社交】${event.eventTitle }</title>
     <link rel="stylesheet" href="${ctx}/css/offlineActivityDetail.css" type="text/css">
 </head>
 <body>
@@ -139,7 +139,7 @@
     </c:if>
 </div>
 <script src="${ctx}/js/activityDetail.js" type="text/javascript" charset="gbk"></script>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<%--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
     $(document).ready(function() {
         $.ajax({
@@ -221,6 +221,6 @@
         });
         return result;
     }
-</script>
+</script>--%>
 </body>
 </html>

@@ -1,7 +1,7 @@
 package edu.whu.irlab.client.web.wechat;
 
 
-import edu.whu.irlab.wechat.model.Parameter;
+import edu.whu.irlab.wechat.common.Configure;
 import edu.whu.irlab.wechat.service.WeChatService;
 import edu.whu.irlab.wechat.util.SignUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +24,6 @@ public class WeChatController {
     @Autowired
     private WeChatService weChatService;
 
-    @Autowired
-    private Parameter parameter;
-
 
     @RequestMapping(value = "/wechat", method = RequestMethod.GET)
     public void validation(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -41,7 +38,7 @@ public class WeChatController {
 
         PrintWriter out = response.getWriter();
         // 通过检验signature对请求进行校验，若校验成功则原样返回echostr，表示接入成功，否则接入失败
-        if (SignUtil.checkSignature(parameter.getToken(), signature, timestamp, nonce)) {
+        if (SignUtil.checkSignature(Configure.getToken(), signature, timestamp, nonce)) {
             out.print(echostr);
         }
         out.close();
@@ -62,7 +59,7 @@ public class WeChatController {
     @ResponseBody
     public Map<String,String> getWeChatConfig(String url){
         System.out.println("WeChatConfig url:"+url);
-        Map<String, String> map = SignUtil.jsTicketSign(parameter.getAppId(), parameter.getAppSecret(), url);
+        Map<String, String> map = SignUtil.jsTicketSign(Configure.getAppid(), Configure.getAppSecret(), url);
         return map;
     }
 }

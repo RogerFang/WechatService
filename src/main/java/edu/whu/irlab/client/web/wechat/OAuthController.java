@@ -1,12 +1,10 @@
 package edu.whu.irlab.client.web.wechat;
 
-import edu.whu.irlab.wechat.model.Parameter;
+import edu.whu.irlab.wechat.common.Configure;
 import edu.whu.irlab.wechat.model.oauth.OAuthToken;
-import edu.whu.irlab.wechat.model.oauth.SNSUserInfo;
 import edu.whu.irlab.wechat.util.oauth.AdvancedUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -20,9 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class OAuthController {
     private static Logger logger = LoggerFactory.getLogger(OAuthController.class);
-
-    @Autowired
-    private Parameter parameter;
 
     @RequestMapping("/oauth")
     public String oauth(HttpServletRequest request, RedirectAttributes redirectAttributes){
@@ -39,7 +34,7 @@ public class OAuthController {
         // 用户同意授权
         if (code != null && (!code.equals(""))) {
             // 获取网页授权access_token
-            OAuthToken oauthToken = AdvancedUtil.getOauth2AccessToken(parameter.getAppId(), parameter.getAppSecret(), code);
+            OAuthToken oauthToken = AdvancedUtil.getOauth2AccessToken(Configure.getAppid(), Configure.getAppSecret(), code);
             // 网页授权接口访问凭证
             if(oauthToken!=null){
                 accessToken = oauthToken.getAccessToken();
